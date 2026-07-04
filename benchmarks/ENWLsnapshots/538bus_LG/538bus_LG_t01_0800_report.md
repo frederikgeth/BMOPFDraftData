@@ -1,6 +1,6 @@
 # BMOPF Network Summary: Unnamed Network
 
-**Generated:** 2026-06-29 20:08:28  
+**Generated:** 2026-07-04 11:46:35  
 **Findings:** 0 errors · 3 warnings · 7 info  
 **Convention:** LV_230V: 4-wire; 1 grounding point(s)
 
@@ -143,7 +143,7 @@
 | Benchmark readiness | Value |
 |---------------------|------:|
 | Objective well-posed | true |
-| Only slack generation | true |
+| Only slack generation | false |
 | Buses with \|V\| bounds | 0.0% |
 | Buses with vpn / vpp / vpos bounds | 0 / 0 / 0 |
 | Lines with thermal limits | 0.0% |
@@ -154,12 +154,11 @@
 
 **Augmentation needed:**
 
-- only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds
 - no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground)
 - no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF
 - 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section)
 
-> 🔵 **[I.BENCH.AUGMENTATION]** Case needs augmentation to be a non-trivial OPF benchmark: only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds; no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
+> 🔵 **[I.BENCH.AUGMENTATION]** Case needs augmentation to be a non-trivial OPF benchmark: no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
 
 ## 9. Data Quality Summary
 
@@ -189,5 +188,5 @@
 - **[I.RED.MERGEABLE_LINES]** `line`  
   18 group(s) of series lines (43 lines total) can be merged — intermediate buses have no other connections.
 - **[I.BENCH.AUGMENTATION]** `network`  
-  Case needs augmentation to be a non-trivial OPF benchmark: only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds; no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
+  Case needs augmentation to be a non-trivial OPF benchmark: no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
 

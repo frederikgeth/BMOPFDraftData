@@ -95,27 +95,45 @@ struct Row
     status_pu    ::String
     objective_pu ::Union{Float64,Nothing}
     time_pu      ::Float64
+    # optimization profile of the best-known (SI) solution
+    dof          ::Union{Int,Nothing}
+    barrier_iters::Union{Int,Nothing}
+    solve_time_s ::Union{Float64,Nothing}
+    n_active     ::Union{Int,Nothing}
+    strict_comp  ::Union{Bool,Nothing}
+    is_opf       ::Union{Bool,Nothing}
 end
 
+# Returns (status, objective, wall_time_s, opt_profile::Union{Dict,Nothing}).
+# opt_profile carries the solver-side fingerprint (DOF, active set, iterations).
 function _run_solve(net, per_unit)
-    status = "ERROR"; obj = nothing; t0 = time()
+    status = "ERROR"; obj = nothing; prof = nothing; t0 = time()
     try
         res = solve_opf(net; optimizer=_optimizer(; max_iter=OPF_MAX_ITER), per_unit=per_unit)
         status = res["termination_status"]
         obj    = res["objective"]
+        prof   = get(res, "opt_profile", nothing)
     catch e
         status = "ERROR: $(sprint(showerror, e))"
     end
-    return status, obj, round(time() - t0; digits=1)
+    return status, obj, round(time() - t0; digits=1), prof
 end
+
+# is_opf: at least one operational constraint binds at the best-known solution.
+_prof_is_opf(p) = p === nothing ? nothing :
+    (get(p, "n_active", nothing) isa Number ? get(p, "n_active", 0) > 0 : nothing)
 
 _flush_results(rows) = open(RESULT_JSON, "w") do io
     JSON3.pretty(io, [
         Dict("name" => r.name, "n_buses" => r.n_buses, "n_gens" => r.n_gens,
              "status_si" => r.status_si, "objective_si" => r.objective_si, "time_si_s" => r.time_si,
-             "status_pu" => r.status_pu, "objective_pu" => r.objective_pu, "time_pu_s" => r.time_pu)
+             "status_pu" => r.status_pu, "objective_pu" => r.objective_pu, "time_pu_s" => r.time_pu,
+             # optimization fingerprint (from the SI solve)
+             "dof" => r.dof, "barrier_iters" => r.barrier_iters,
+             "solve_time_s" => r.solve_time_s, "n_active" => r.n_active,
+             "strict_complementarity" => r.strict_comp, "is_opf" => r.is_opf)
         for r in rows
-    ])
+    ]; allow_inf=true)
 end
 
 _fmt_obj(status, obj) =
@@ -142,18 +160,27 @@ function stage_opf()
         @printf("[%3d/%d] %s  (%d buses, %d gens)\n", i, n, stem, n_buses, n_gens)
 
         print("         SI  … "); flush(stdout)
-        status_si, obj_si, t_si = _run_solve(net, false)
+        status_si, obj_si, t_si, prof_si = _run_solve(net, false)
         status_si in SOLVED_STATUSES ? @printf("✓ %+.6e  (%.1fs)\n", obj_si, t_si) :
                                        @printf("✗ %s  (%.1fs)\n", status_si, t_si)
 
         print("         PU  … "); flush(stdout)
-        status_pu, obj_pu, t_pu = _run_solve(net, true)
+        status_pu, obj_pu, t_pu, prof_pu = _run_solve(net, true)
         status_pu in SOLVED_STATUSES ? @printf("✓ %+.6e  (%.1fs)\n", obj_pu, t_pu) :
                                        @printf("✗ %s  (%.1fs)\n", status_pu, t_pu)
         println()
 
+        # Profile from the per-unit solve — well-scaled (O(1)) so the binding
+        # tolerance is unit-robust; fall back to SI if PU did not solve.
+        p = prof_pu !== nothing ? prof_pu : prof_si
         push!(rows, Row(stem, n_buses, n_gens,
-                        status_si, obj_si, t_si, status_pu, obj_pu, t_pu))
+                        status_si, obj_si, t_si, status_pu, obj_pu, t_pu,
+                        p === nothing ? nothing : get(p, "degrees_of_freedom", nothing),
+                        p === nothing ? nothing : get(p, "barrier_iterations", nothing),
+                        p === nothing ? nothing : get(p, "solve_time_s", nothing),
+                        p === nothing ? nothing : get(p, "n_active", nothing),
+                        p === nothing ? nothing : get(p, "strict_complementarity", nothing),
+                        _prof_is_opf(p)))
         _flush_results(rows)   # checkpoint after every case
     end
 

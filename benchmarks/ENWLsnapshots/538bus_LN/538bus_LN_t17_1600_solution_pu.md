@@ -1,10 +1,10 @@
 # BMOPF Solution Profile: Unnamed Network
 
-**Generated:** 2026-06-29 20:12:06  
+**Generated:** 2026-07-04 11:49:21  
 **Status:** `LOCALLY_SOLVED`  
 **Objective:** -880553.8835  
-**Solve time:** 0.719 s  
-**Findings:** 59 errors · 246 warnings · 3 info  
+**Solve time:** 0.59 s  
+**Findings:** 23 errors · 282 warnings · 3 info  
 
 ---
 
@@ -583,6 +583,22 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
 | ✅ | `4` | 230.2 | 230.4 | 1.001 | 1.002 | 0.1 % | 0.11 V |
 | ✅ | `sourcebus` | 230.0 | 230.0 | 1.0 | 1.0 | 0.0 % | — |
 
+## Optimization Profile
+
+| Metric | Value |
+|--------|-------|
+| Variables | 10424 |
+| Equality constraints | 10122 |
+| Inequality constraints | 1208 |
+| Degrees of freedom | 302 |
+| Active (binding) constraints | 313 |
+| Genuine OPF (something binds) | true |
+| Strictly complementary | true |
+| Weakly-active (degenerate) | 0 |
+| Barrier iterations | 38 |
+| Solve time (s) | 0.5898230075836182 |
+| Max shadow price (per_unit) | 6.788e7 |
+
 ## 6. All Findings
 
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_261`  
@@ -615,8 +631,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_214' phase 'b': pg=4.296 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_197`  
   IBR 'pv_197' phase 'b': pg=4.319 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_156`  
-  IBR 'pv_156' phase 'a': pg=2.892 kW violates [0.0 W, 2.892 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_156`  
+  IBR 'pv_156' phase 'a': pg=2.892 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_48`  
   IBR 'pv_48' phase 'c': pg=4.78 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_225`  
@@ -687,8 +703,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_192' phase 'b': pg=4.099 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_89`  
   IBR 'pv_89' phase 'b': pg=4.452 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_80`  
-  IBR 'pv_80' phase 'a': pg=2.967 kW violates [0.0 W, 2.967 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_80`  
+  IBR 'pv_80' phase 'a': pg=2.967 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_36`  
   IBR 'pv_36' phase 'c': pg=4.384 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_118`  
@@ -697,8 +713,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_23' phase 'a': pg=2.09 kW violates [0.0 W, 2.08 kW].
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_232`  
   IBR 'pv_232' phase 'b': pg=4.496 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_201`  
-  IBR 'pv_201' phase 'a': pg=2.748 kW violates [0.0 W, 2.747 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_201`  
+  IBR 'pv_201' phase 'a': pg=2.748 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_287`  
   IBR 'pv_287' phase 'c': pg=4.278 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_164`  
@@ -707,12 +723,12 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_60' phase 'a': pg=4.476 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_133`  
   IBR 'pv_133' phase 'a': pg=4.091 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_138`  
-  IBR 'pv_138' phase 'a': pg=2.755 kW violates [0.0 W, 2.753 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_138`  
+  IBR 'pv_138' phase 'a': pg=2.755 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_187`  
   IBR 'pv_187' phase 'b': pg=4.403 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_155`  
-  IBR 'pv_155' phase 'b': pg=-0.01 W violates [0.0 W, 4.9 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_155`  
+  IBR 'pv_155' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_236`  
   IBR 'pv_236' phase 'a': pg=4.448 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_47`  
@@ -739,8 +755,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_198' phase 'b': pg=4.632 kW is within 1 % of its P bound.
 - **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_73`  
   IBR 'pv_73' phase 'a': pg=1.983 kW violates [0.0 W, 1.968 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_162`  
-  IBR 'pv_162' phase 'a': pg=2.739 kW violates [0.0 W, 2.737 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_162`  
+  IBR 'pv_162' phase 'a': pg=2.739 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_43`  
   IBR 'pv_43' phase 'b': pg=4.302 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_126`  
@@ -751,8 +767,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_77' phase 'b': pg=4.404 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_240`  
   IBR 'pv_240' phase 'b': pg=4.424 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_196`  
-  IBR 'pv_196' phase 'a': pg=2.989 kW violates [0.0 W, 2.988 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_196`  
+  IBR 'pv_196' phase 'a': pg=2.989 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_286`  
   IBR 'pv_286' phase 'a': pg=4.359 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_294`  
@@ -775,8 +791,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_200' phase 'b': pg=4.114 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_165`  
   IBR 'pv_165' phase 'c': pg=4.995 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_30`  
-  IBR 'pv_30' phase 'b': pg=-0.01 W violates [0.0 W, 4.834 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_30`  
+  IBR 'pv_30' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_176`  
   IBR 'pv_176' phase 'c': pg=4.581 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_218`  
@@ -799,14 +815,14 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_254' phase 'a': pg=4.597 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_239`  
   IBR 'pv_239' phase 'b': pg=4.166 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_27`  
-  IBR 'pv_27' phase 'a': pg=2.949 kW violates [0.0 W, 2.949 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_27`  
+  IBR 'pv_27' phase 'a': pg=2.949 kW is within 1 % of its P bound.
 - **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_292`  
   IBR 'pv_292' phase 'b': |S|=5.251 kW exceeds s_max=5.25 kW (apparent-power circle violated).
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_33`  
   IBR 'pv_33' phase 'b': pg=4.169 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_78`  
-  IBR 'pv_78' phase 'b': pg=-0.01 W violates [0.0 W, 4.508 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_78`  
+  IBR 'pv_78' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_32`  
   IBR 'pv_32' phase 'a': pg=4.298 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_7`  
@@ -817,8 +833,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_210' phase 'a': pg=3.206 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_207`  
   IBR 'pv_207' phase 'c': pg=4.478 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_115`  
-  IBR 'pv_115' phase 'b': pg=-0.01 W violates [0.0 W, 4.405 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_115`  
+  IBR 'pv_115' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_79`  
   IBR 'pv_79' phase 'b': pg=4.252 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_109`  
@@ -833,12 +849,12 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_204' phase 'b': pg=4.405 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_289`  
   IBR 'pv_289' phase 'c': pg=4.125 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_10`  
-  IBR 'pv_10' phase 'a': pg=2.732 kW violates [0.0 W, 2.73 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_10`  
+  IBR 'pv_10' phase 'a': pg=2.732 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_40`  
   IBR 'pv_40' phase 'a': pg=4.376 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_125`  
-  IBR 'pv_125' phase 'a': pg=3.118 kW violates [0.0 W, 3.118 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_125`  
+  IBR 'pv_125' phase 'a': pg=3.118 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_222`  
   IBR 'pv_222' phase 'b': pg=4.205 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_104`  
@@ -861,12 +877,12 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_53' phase 'c': pg=4.77 kW is within 1 % of its P bound.
 - **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_231`  
   IBR 'pv_231' phase 'c': |S|=5.251 kW exceeds s_max=5.25 kW (apparent-power circle violated).
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_90`  
-  IBR 'pv_90' phase 'a': pg=2.914 kW violates [0.0 W, 2.914 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_90`  
+  IBR 'pv_90' phase 'a': pg=2.914 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_17`  
   IBR 'pv_17' phase 'b': pg=4.715 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_64`  
-  IBR 'pv_64' phase 'b': pg=-0.01 W violates [0.0 W, 4.878 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_64`  
+  IBR 'pv_64' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_103`  
   IBR 'pv_103' phase 'a': pg=4.065 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_91`  
@@ -893,20 +909,20 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_266' phase 'c': pg=3.654 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_228`  
   IBR 'pv_228' phase 'c': pg=3.761 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_143`  
-  IBR 'pv_143' phase 'b': pg=-0.01 W violates [0.0 W, 4.228 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_143`  
+  IBR 'pv_143' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_3`  
   IBR 'pv_3' phase 'c': pg=4.658 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_160`  
-  IBR 'pv_160' phase 'a': pg=2.716 kW violates [0.0 W, 2.714 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_160`  
+  IBR 'pv_160' phase 'a': pg=2.716 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_272`  
   IBR 'pv_272' phase 'a': pg=4.238 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_137`  
   IBR 'pv_137' phase 'a': pg=4.102 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_233`  
-  IBR 'pv_233' phase 'b': pg=-0.01 W violates [0.0 W, 4.986 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_107`  
-  IBR 'pv_107' phase 'a': pg=2.727 kW violates [0.0 W, 2.726 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_233`  
+  IBR 'pv_233' phase 'b': pg=-0.01 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_107`  
+  IBR 'pv_107' phase 'a': pg=2.727 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_65`  
   IBR 'pv_65' phase 'c': pg=4.449 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_4`  
@@ -935,8 +951,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_268' phase 'b': pg=4.398 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_57`  
   IBR 'pv_57' phase 'c': pg=4.362 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_183`  
-  IBR 'pv_183' phase 'a': pg=2.75 kW violates [0.0 W, 2.749 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_183`  
+  IBR 'pv_183' phase 'a': pg=2.75 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_68`  
   IBR 'pv_68' phase 'c': pg=4.207 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_213`  
@@ -959,8 +975,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_149' phase 'a': pg=4.22 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_136`  
   IBR 'pv_136' phase 'b': pg=4.182 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_140`  
-  IBR 'pv_140' phase 'a': pg=3.089 kW violates [0.0 W, 3.089 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_140`  
+  IBR 'pv_140' phase 'a': pg=3.089 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_41`  
   IBR 'pv_41' phase 'b': pg=4.402 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_12`  
@@ -981,8 +997,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_83' phase 'a': pg=4.535 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_243`  
   IBR 'pv_243' phase 'b': pg=4.81 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_253`  
-  IBR 'pv_253' phase 'b': pg=-0.01 W violates [0.0 W, 4.986 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_253`  
+  IBR 'pv_253' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_74`  
   IBR 'pv_74' phase 'c': pg=4.481 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_1`  
@@ -1003,8 +1019,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_9' phase 'b': pg=4.402 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_45`  
   IBR 'pv_45' phase 'c': pg=4.1 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_226`  
-  IBR 'pv_226' phase 'b': pg=-0.01 W violates [0.0 W, 4.216 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_226`  
+  IBR 'pv_226' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_121`  
   IBR 'pv_121' phase 'b': pg=4.523 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_8`  
@@ -1065,14 +1081,14 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_279' phase 'c': pg=4.799 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_179`  
   IBR 'pv_179' phase 'c': pg=4.751 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_206`  
-  IBR 'pv_206' phase 'b': pg=-0.01 W violates [0.0 W, 4.496 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_206`  
+  IBR 'pv_206' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_275`  
   IBR 'pv_275' phase 'b': pg=4.26 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_180`  
-  IBR 'pv_180' phase 'a': pg=2.994 kW violates [0.0 W, 2.994 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_171`  
-  IBR 'pv_171' phase 'a': pg=2.782 kW violates [0.0 W, 2.781 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_180`  
+  IBR 'pv_180' phase 'a': pg=2.994 kW is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_171`  
+  IBR 'pv_171' phase 'a': pg=2.782 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_114`  
   IBR 'pv_114' phase 'a': pg=4.405 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_86`  
@@ -1081,10 +1097,10 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_37' phase 'c': pg=3.533 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_147`  
   IBR 'pv_147' phase 'a': pg=4.103 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_22`  
-  IBR 'pv_22' phase 'a': pg=2.937 kW violates [0.0 W, 2.937 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_238`  
-  IBR 'pv_238' phase 'b': pg=-0.01 W violates [0.0 W, 4.73 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_22`  
+  IBR 'pv_22' phase 'a': pg=2.937 kW is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_238`  
+  IBR 'pv_238' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_150`  
   IBR 'pv_150' phase 'a': pg=2.134 kW violates [0.0 W, 2.125 kW].
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_247`  
@@ -1097,8 +1113,8 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_211' phase 'c': pg=4.123 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_46`  
   IBR 'pv_46' phase 'b': pg=4.438 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_39`  
-  IBR 'pv_39' phase 'a': pg=2.675 kW violates [0.0 W, 2.673 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_39`  
+  IBR 'pv_39' phase 'a': pg=2.675 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_100`  
   IBR 'pv_100' phase 'b': pg=4.877 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_274`  
@@ -1107,10 +1123,10 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_25' phase 'c': pg=4.629 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_131`  
   IBR 'pv_131' phase 'c': pg=4.647 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_277`  
-  IBR 'pv_277' phase 'b': pg=-0.01 W violates [0.0 W, 4.405 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_71`  
-  IBR 'pv_71' phase 'a': pg=3.088 kW violates [0.0 W, 3.088 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_277`  
+  IBR 'pv_277' phase 'b': pg=-0.01 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_71`  
+  IBR 'pv_71' phase 'a': pg=3.088 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_276`  
   IBR 'pv_276' phase 'b': pg=4.114 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_283`  
@@ -1155,14 +1171,14 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_52' phase 'c': |S|=5.251 kW exceeds s_max=5.25 kW (apparent-power circle violated).
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_35`  
   IBR 'pv_35' phase 'a': pg=4.276 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_246`  
-  IBR 'pv_246' phase 'b': pg=-0.01 W violates [0.0 W, 4.431 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_246`  
+  IBR 'pv_246' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_116`  
   IBR 'pv_116' phase 'c': pg=4.164 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_106`  
-  IBR 'pv_106' phase 'b': pg=-0.01 W violates [0.0 W, 4.128 kW].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_258`  
-  IBR 'pv_258' phase 'a': pg=2.9 kW violates [0.0 W, 2.899 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_106`  
+  IBR 'pv_106' phase 'b': pg=-0.01 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_258`  
+  IBR 'pv_258' phase 'a': pg=2.9 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_135`  
   IBR 'pv_135' phase 'b': pg=4.991 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_148`  
@@ -1175,12 +1191,12 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
   IBR 'pv_84' phase 'b': pg=4.745 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_217`  
   IBR 'pv_217' phase 'b': pg=4.419 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_230`  
-  IBR 'pv_230' phase 'a': pg=2.791 kW violates [0.0 W, 2.79 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_230`  
+  IBR 'pv_230' phase 'a': pg=2.791 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_98`  
   IBR 'pv_98' phase 'b': pg=4.374 kW is within 1 % of its P bound.
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_255`  
-  IBR 'pv_255' phase 'b': pg=-0.01 W violates [0.0 W, 4.844 kW].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_255`  
+  IBR 'pv_255' phase 'b': pg=-0.01 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_221`  
   IBR 'pv_221' phase 'b': pg=4.404 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_174`  

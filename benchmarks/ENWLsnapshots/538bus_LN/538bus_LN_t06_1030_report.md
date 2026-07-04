@@ -1,7 +1,7 @@
 # BMOPF Network Summary: Unnamed Network
 
-**Generated:** 2026-06-29 20:10:19  
-**Findings:** 0 errors · 3 warnings · 7 info  
+**Generated:** 2026-07-04 11:48:12  
+**Findings:** 0 errors · 2 warnings · 7 info  
 **Convention:** LV_230V: 4-wire; 1 grounding point(s)
 
 ---
@@ -73,17 +73,16 @@
 |--|-------|
 | Total load P | 65.778 kW |
 | Total load Q | 21.6 kvar |
-| Total gen capacity | 0.0 W |
-| Generation/load ratio | 0.0% |
+| Total gen capacity | 959.728 kW |
+| Generation/load ratio | 1459.1% |
 
-> 🟡 **[W.OPS.IMPORT_DEPENDENT]** Network is heavily import-dependent: local generation capacity (0.0 MW) is less than 5% of total load (0.07 MW).
 > 🟡 **[W.OPS.LINE_UNCONSTRAINED]** 537 of 537 lines have no thermal limit (i_max or s_max) — OPF thermal constraints will be missing.
 
 ## 6. Infeasibility Pre-flight
 
 | Check | Result |
 |-------|--------|
-| Import dependent | true |
+| Import dependent | false |
 | Constraint conflicts | 0 |
 | Buses without voltage bounds | 538 |
 | Single point of failure | true |
@@ -143,7 +142,7 @@
 | Benchmark readiness | Value |
 |---------------------|------:|
 | Objective well-posed | true |
-| Only slack generation | true |
+| Only slack generation | false |
 | Buses with \|V\| bounds | 0.0% |
 | Buses with vpn / vpp / vpos bounds | 0 / 0 / 0 |
 | Lines with thermal limits | 0.0% |
@@ -154,21 +153,18 @@
 
 **Augmentation needed:**
 
-- only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds
 - no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground)
 - no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF
 - 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section)
 
-> 🔵 **[I.BENCH.AUGMENTATION]** Case needs augmentation to be a non-trivial OPF benchmark: only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds; no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
+> 🔵 **[I.BENCH.AUGMENTATION]** Case needs augmentation to be a non-trivial OPF benchmark: no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
 
 ## 9. Data Quality Summary
 
-**Total findings:** 10 (0 errors, 3 warnings, 7 info)
+**Total findings:** 9 (0 errors, 2 warnings, 7 info)
 
 ### 🟡 Warnings
 
-- **[W.OPS.IMPORT_DEPENDENT]** `network`  
-  Network is heavily import-dependent: local generation capacity (0.0 MW) is less than 5% of total load (0.07 MW).
 - **[W.OPS.LINE_UNCONSTRAINED]** `line`  
   537 of 537 lines have no thermal limit (i_max or s_max) — OPF thermal constraints will be missing.
 - **[W.PROV.I_MAX_ABSENT]** `line`  
@@ -189,5 +185,5 @@
 - **[I.RED.MERGEABLE_LINES]** `line`  
   18 group(s) of series lines (43 lines total) can be merged — intermediate buses have no other connections.
 - **[I.BENCH.AUGMENTATION]** `network`  
-  Case needs augmentation to be a non-trivial OPF benchmark: only slack generation — dispatch is trivial (loss minimisation); add dispatchable DERs with diverse costs and p/q bounds; no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
+  Case needs augmentation to be a non-trivial OPF benchmark: no voltage magnitude bounds on any bus — voltage is unconstrained; add v_min/v_max (phase-to-ground); no phase-to-neutral or sequence voltage bounds (vpn_*/vpos_*) — sequence bounds also improve solver robustness for 4-wire OPF; 537 of 537 lines lack thermal limits — add i_max/s_max (e.g. correlated with conductor cross-section).
 

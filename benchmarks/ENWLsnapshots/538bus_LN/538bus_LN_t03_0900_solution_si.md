@@ -1,9 +1,9 @@
 # BMOPF Solution Profile: Unnamed Network
 
-**Generated:** 2026-06-29 20:10:05  
+**Generated:** 2026-07-04 11:48:07  
 **Status:** `LOCALLY_SOLVED`  
 **Objective:** -272008.5594  
-**Solve time:** 0.779 s  
+**Solve time:** 0.786 s  
 **Findings:** 0 errors · 302 warnings · 2 info  
 
 ---
@@ -583,6 +583,22 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
 | ✅ | `4` | 230.1 | 230.1 | 1.0 | 1.001 | 0.0 % | 0.06 V |
 | ✅ | `sourcebus` | 230.0 | 230.0 | 1.0 | 1.0 | 0.0 % | — |
 
+## Optimization Profile
+
+| Metric | Value |
+|--------|-------|
+| Variables | 10424 |
+| Equality constraints | 10122 |
+| Inequality constraints | 1208 |
+| Degrees of freedom | 302 |
+| Active (binding) constraints | 303 |
+| Genuine OPF (something binds) | true |
+| Strictly complementary | true |
+| Weakly-active (degenerate) | 0 |
+| Barrier iterations | 36 |
+| Solve time (s) | 0.7855401039123535 |
+| Max shadow price (SI) | 424200.0 |
+
 ## 6. All Findings
 
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_261`  
@@ -648,7 +664,7 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_224`  
   IBR 'pv_224' phase 'b': pg=1.41 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_298`  
-  IBR 'pv_298' phase 'c': pg=-0.0 W is within 1 % of its P bound.
+  IBR 'pv_298' phase 'c': pg=0.0 W is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_191`  
   IBR 'pv_191' phase 'b': pg=1.299 kW is within 1 % of its P bound.
 - **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_134`  

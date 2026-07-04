@@ -1,9 +1,9 @@
 # BMOPF Solution Profile: Unnamed Network
 
-**Generated:** 2026-06-29 20:13:26  
+**Generated:** 2026-07-04 11:50:02  
 **Status:** `LOCALLY_SOLVED`  
 **Objective:** -172783.7639  
-**Solve time:** 0.079 s  
+**Solve time:** 0.071 s  
 **Findings:** 0 errors · 44 warnings · 3 info  
 
 ---
@@ -143,6 +143,22 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
 | ✅ | `82` | 236.0 | 242.5 | 1.026 | 1.054 | 2.8 % | 6.95 V |
 | ✅ | `62` | 234.6 | 238.7 | 1.02 | 1.038 | 1.8 % | 4.84 V |
 | ✅ | `sourcebus` | 230.0 | 230.0 | 1.0 | 1.0 | 0.0 % | — |
+
+## Optimization Profile
+
+| Metric | Value |
+|--------|-------|
+| Variables | 1872 |
+| Equality constraints | 1824 |
+| Inequality constraints | 192 |
+| Degrees of freedom | 48 |
+| Active (binding) constraints | 48 |
+| Genuine OPF (something binds) | true |
+| Strictly complementary | true |
+| Weakly-active (degenerate) | 0 |
+| Barrier iterations | 29 |
+| Solve time (s) | 0.07117795944213867 |
+| Max shadow price (SI) | 0.9635 |
 
 ## 6. All Findings
 

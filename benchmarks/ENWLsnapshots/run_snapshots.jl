@@ -97,6 +97,10 @@ end
 
 # ── Summary formatting ────────────────────────────────────────────────────────
 
+# NaN/Inf (e.g. objective on non-convergence) → null, so the summary stays strict
+# JSON the downstream tagger can parse.
+_nn(x) = (x isa AbstractFloat && !isfinite(x)) ? nothing : x
+
 _fmt_obj(status, obj) =
     status in SOLVED_STATUSES ? (obj === nothing ? "—" : @sprintf("%.6g", obj)) :
                                 "`$(split(status, ':')[1])`"
@@ -200,12 +204,23 @@ function main(args)
                                        @printf("✗ %s  (%.1fs)\n", split(status_pu, '\n')[1], t_pu)
         println()
 
+        # optimization fingerprint — prefer the per-unit solve (well-scaled, so the
+        # binding tolerance is unit-robust); fall back to SI.
+        p = res_pu !== nothing ? get(res_pu, "opt_profile", nothing) :
+            res_si !== nothing ? get(res_si, "opt_profile", nothing) : nothing
+        n_active = p === nothing ? nothing : get(p, "n_active", nothing)
         push!(rows, Dict{String,Any}(
             "folder" => c.folder, "name" => stem,
             "n_buses" => n_buses, "n_gens" => n_gens,
-            "status_si" => status_si, "objective_si" => obj_si, "time_si_s" => t_si,
-            "status_pu" => status_pu, "objective_pu" => obj_pu, "time_pu_s" => t_pu,
+            "status_si" => status_si, "objective_si" => _nn(obj_si), "time_si_s" => t_si,
+            "status_pu" => status_pu, "objective_pu" => _nn(obj_pu), "time_pu_s" => t_pu,
             "n_errors" => n_err, "n_warnings" => n_warn,
+            "dof" => p === nothing ? nothing : get(p, "degrees_of_freedom", nothing),
+            "barrier_iters" => p === nothing ? nothing : get(p, "barrier_iterations", nothing),
+            "solve_time_s" => p === nothing ? nothing : get(p, "solve_time_s", nothing),
+            "n_active" => n_active,
+            "strict_complementarity" => p === nothing ? nothing : get(p, "strict_complementarity", nothing),
+            "is_opf" => n_active isa Number ? n_active > 0 : nothing,
         ))
         _flush_summary(rows)          # checkpoint after every case
     end

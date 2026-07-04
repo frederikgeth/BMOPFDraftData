@@ -7,7 +7,8 @@ using BMOPFTools
 using Dates
 
 # Output layout: output/ENWLbenchmark/{original,reduced}/
-const BENCH_DIR    = normpath(joinpath(@__DIR__, "..", "output", "ENWLbenchmark"))
+# Curated ENWL benchmark cases live under benchmarks/ (relocated out of output/).
+const BENCH_DIR    = normpath(joinpath(@__DIR__, "..", "benchmarks", "ENWLbenchmark"))
 const ORIG_DIR     = joinpath(BENCH_DIR, "original")
 const REDUCED_DIR  = joinpath(BENCH_DIR, "reduced")
 

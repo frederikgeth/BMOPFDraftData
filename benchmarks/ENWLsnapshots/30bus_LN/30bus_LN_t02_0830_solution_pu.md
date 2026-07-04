@@ -1,10 +1,10 @@
 # BMOPF Solution Profile: Unnamed Network
 
-**Generated:** 2026-06-29 20:08:23  
+**Generated:** 2026-07-04 11:46:31  
 **Status:** `LOCALLY_SOLVED`  
 **Objective:** -5773.4151  
-**Solve time:** 0.05 s  
-**Findings:** 28 errors · 0 warnings · 2 info  
+**Solve time:** 0.048 s  
+**Findings:** 0 errors · 28 warnings · 2 info  
 
 ---
 
@@ -75,64 +75,80 @@ Per-unit magnitudes are relative to each zone's own voltage base; volts are not 
 | ✅ | `93` | 229.7 | 230.3 | 0.999 | 1.001 | 0.2 % | 0.95 V |
 | ✅ | `sourcebus` | 230.0 | 230.0 | 1.0 | 1.0 | 0.0 % | — |
 
+## Optimization Profile
+
+| Metric | Value |
+|--------|-------|
+| Variables | 648 |
+| Equality constraints | 620 |
+| Inequality constraints | 112 |
+| Degrees of freedom | 28 |
+| Active (binding) constraints | 28 |
+| Genuine OPF (something binds) | true |
+| Strictly complementary | true |
+| Weakly-active (degenerate) | 0 |
+| Barrier iterations | 16 |
+| Solve time (s) | 0.048486948013305664 |
+| Max shadow price (per_unit) | 1.02e6 |
+
 ## 6. All Findings
 
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_12`  
-  IBR 'pv_12' phase 'a': pg=725.73 W violates [0.0 W, 725.72 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_7`  
-  IBR 'pv_7' phase 'b': pg=739.96 W violates [0.0 W, 739.95 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_21`  
-  IBR 'pv_21' phase 'c': pg=718.55 W violates [0.0 W, 718.54 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_3`  
-  IBR 'pv_3' phase 'c': pg=630.29 W violates [0.0 W, 630.28 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_28`  
-  IBR 'pv_28' phase 'b': pg=668.42 W violates [0.0 W, 668.41 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_11`  
-  IBR 'pv_11' phase 'a': pg=666.93 W violates [0.0 W, 666.92 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_1`  
-  IBR 'pv_1' phase 'b': pg=638.63 W violates [0.0 W, 638.62 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_22`  
-  IBR 'pv_22' phase 'c': pg=652.29 W violates [0.0 W, 652.28 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_4`  
-  IBR 'pv_4' phase 'a': pg=721.29 W violates [0.0 W, 721.28 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_14`  
-  IBR 'pv_14' phase 'c': pg=737.46 W violates [0.0 W, 737.45 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_23`  
-  IBR 'pv_23' phase 'b': pg=733.4 W violates [0.0 W, 733.39 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_16`  
-  IBR 'pv_16' phase 'a': pg=636.02 W violates [0.0 W, 636.01 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_10`  
-  IBR 'pv_10' phase 'b': pg=627.41 W violates [0.0 W, 627.4 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_9`  
-  IBR 'pv_9' phase 'a': pg=645.59 W violates [0.0 W, 645.58 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_25`  
-  IBR 'pv_25' phase 'a': pg=627.83 W violates [0.0 W, 627.82 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_8`  
-  IBR 'pv_8' phase 'c': pg=722.73 W violates [0.0 W, 722.72 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_2`  
-  IBR 'pv_2' phase 'b': pg=747.84 W violates [0.0 W, 747.83 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_18`  
-  IBR 'pv_18' phase 'c': pg=702.01 W violates [0.0 W, 702.0 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_6`  
-  IBR 'pv_6' phase 'b': pg=727.17 W violates [0.0 W, 727.16 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_15`  
-  IBR 'pv_15' phase 'a': pg=736.52 W violates [0.0 W, 736.51 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_24`  
-  IBR 'pv_24' phase 'a': pg=678.97 W violates [0.0 W, 678.96 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_20`  
-  IBR 'pv_20' phase 'a': pg=630.18 W violates [0.0 W, 630.17 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_19`  
-  IBR 'pv_19' phase 'b': pg=749.96 W violates [0.0 W, 749.95 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_5`  
-  IBR 'pv_5' phase 'b': pg=691.78 W violates [0.0 W, 691.77 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_13`  
-  IBR 'pv_13' phase 'c': pg=697.04 W violates [0.0 W, 697.03 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_17`  
-  IBR 'pv_17' phase 'c': pg=632.73 W violates [0.0 W, 632.72 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_26`  
-  IBR 'pv_26' phase 'c': pg=730.0 W violates [0.0 W, 729.99 W].
-- **ERROR** `E.SOL.IBR_VIOLATION` — ibr/`pv_27`  
-  IBR 'pv_27' phase 'a': pg=739.81 W violates [0.0 W, 739.8 W].
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_12`  
+  IBR 'pv_12' phase 'a': pg=725.73 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_7`  
+  IBR 'pv_7' phase 'b': pg=739.96 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_21`  
+  IBR 'pv_21' phase 'c': pg=718.55 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_3`  
+  IBR 'pv_3' phase 'c': pg=630.29 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_28`  
+  IBR 'pv_28' phase 'b': pg=668.42 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_11`  
+  IBR 'pv_11' phase 'a': pg=666.93 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_1`  
+  IBR 'pv_1' phase 'b': pg=638.63 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_22`  
+  IBR 'pv_22' phase 'c': pg=652.29 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_4`  
+  IBR 'pv_4' phase 'a': pg=721.29 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_14`  
+  IBR 'pv_14' phase 'c': pg=737.46 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_23`  
+  IBR 'pv_23' phase 'b': pg=733.4 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_16`  
+  IBR 'pv_16' phase 'a': pg=636.02 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_10`  
+  IBR 'pv_10' phase 'b': pg=627.41 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_9`  
+  IBR 'pv_9' phase 'a': pg=645.59 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_25`  
+  IBR 'pv_25' phase 'a': pg=627.83 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_8`  
+  IBR 'pv_8' phase 'c': pg=722.73 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_2`  
+  IBR 'pv_2' phase 'b': pg=747.84 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_18`  
+  IBR 'pv_18' phase 'c': pg=702.01 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_6`  
+  IBR 'pv_6' phase 'b': pg=727.17 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_15`  
+  IBR 'pv_15' phase 'a': pg=736.52 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_24`  
+  IBR 'pv_24' phase 'a': pg=678.97 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_20`  
+  IBR 'pv_20' phase 'a': pg=630.18 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_19`  
+  IBR 'pv_19' phase 'b': pg=749.96 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_5`  
+  IBR 'pv_5' phase 'b': pg=691.78 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_13`  
+  IBR 'pv_13' phase 'c': pg=697.04 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_17`  
+  IBR 'pv_17' phase 'c': pg=632.73 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_26`  
+  IBR 'pv_26' phase 'c': pg=730.0 W is within 1 % of its P bound.
+- **WARN** `W.SOL.IBR_ACTIVE` — ibr/`pv_27`  
+  IBR 'pv_27' phase 'a': pg=739.81 W is within 1 % of its P bound.
 - INFO `I.SOL.BINDING_SUMMARY`  
   Solution bound summary: 0 violation(s), 0 active constraint(s). Voltage: 0V / 0A. Thermal: 0V / 0A. Generator: 0V / 0A.
 - INFO `I.SOL.NEUTRAL_SHIFT`  

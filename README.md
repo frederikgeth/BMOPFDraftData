@@ -135,15 +135,49 @@ documented in a `License.md`/`license.md` in the data directory.
 > non-commercial/share-alike terms — plan accordingly if you are building a
 > commercial offering on these cases. When in doubt, prefer the CC BY 4.0 sets.
 
-## Roadmap: tagging & discovery
+## Feature tagging & discovery
 
-These are *draft* datasets, and the collection is growing. A key upcoming
-capability is **feature tagging** — annotating each benchmark with its data
-characteristics (voltage levels, wire count / grounding model, size, radial vs
-meshed, SWER, DER penetration, load diversity, presence of a reference
-solution, licence class, …) so that researchers and practitioners can **pick and
-choose the cases that match their study** at a glance. The BMOPFTools reports
-already surface much of this metadata; the tagging layer will make it queryable.
+Every curated benchmark is **feature-tagged** so you can pick and choose the
+cases that match your study, and so the Task Force can see which algorithmic
+behaviours the corpus exercises — and where the gaps are.
+
+Tags are **derived, not hand-authored**: they come from the structured analysis
+and the **best-known-solution profile** that
+[BMOPFTools.jl](https://github.com/frederikgeth/BMOPFTools.jl) computes for each
+case, mapped through a controlled vocabulary. We tag **three independent axes**
+(following Geth et al., *EPSR* 235, 2024):
+
+- **`model_tier`** (T1 → T∞) — *implementation effort*: how much of the data
+  model you must support to consume the case (delta loads, transformers,
+  voltage-dependent loads, control profiles, time series, …). Paper Table 6.
+- **`benchmark_class`** (`core` / `watch` / `pathological`) — *well-posedness
+  gate*: is this a clean, well-behaved real-world OPF, or does it carry an
+  *artifactual* degeneracy (symmetry, rank deficiency, Kron ambiguity)? **`core`
+  is the recommended set.** Pathological cases are kept and labelled — good for
+  robustness testing, separated from the speed benchmarks. Paper Section 5.
+- **`challenge`** (C1 → C3) — *genuine computational load* among clean cases,
+  from the solution profile (degrees of freedom, binding set, iterations).
+
+These are orthogonal: a case can be **`core` but C3** (a big, clean, richly-binding
+network — the stress test you want) or **`pathological` but tiny** (a symmetric toy
+with no unique solution — an artifact to fix). Catching pathologies fosters *robust*
+algorithms; clean, large, binding cases foster *fast* ones — the Task Force wants
+the latter. Each solved case also carries a `solution_profile`: degrees of freedom,
+number of binding constraints, strict-complementarity (non-degeneracy), shadow
+prices, and solver iterations.
+
+Where to look:
+
+| Artifact | What it is |
+|---|---|
+| [`docs/TAGGING.md`](docs/TAGGING.md) | The controlled vocabulary, all three axes, the solution-profile metrics, and every derivation rule. |
+| [`benchmarks/tags_index.json`](benchmarks/tags_index.json) | Machine-readable tags for every curated case (schema: [`docs/tags_schema.json`](docs/tags_schema.json)). |
+| [`benchmarks/INDEX.md`](benchmarks/INDEX.md) | Human-readable, sortable per-case table. |
+| [`benchmarks/COVERAGE.md`](benchmarks/COVERAGE.md) | Feature-coverage matrix (features × dataset families) — the map of what's exercised and what's missing. |
+
+Regenerate any time with `julia --project=scripts scripts/tag_cases.jl`. The
+first cut covers the curated `benchmarks/` families; extending the same pipeline
+to the full `output/` corpus is next.
 
 Contributions, corrections and new source networks are welcome.
 
