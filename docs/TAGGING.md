@@ -149,7 +149,7 @@ Not tiers — closed vocabularies that let users filter. Multi-valued where note
 ### `provenance`
 - `source` — upstream dataset id (e.g. `ENWL`, `DSuite`, `CSIRO-MVLV`).
 - `doi` — source DOI.
-- `license` — one of `CC-BY-4.0`, `CC-BY-NC-SA-4.0`.
+- `license` — one of `CC-BY-4.0`, `CC-BY-NC-SA-4.0`, `etalab-2.0`.
 - `commercial_use` — bool (`false` for the NC-SA MV/LV set).
 
 Provenance is stamped per dataset by

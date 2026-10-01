@@ -1,0 +1,340 @@
+# MV backbone  (13 buses,  8 LV sections)
+
+84_RIVIE (SRC)
+└── 84_MVLV087413
+    ├── [84_MVLV087413_Transformer: Dyn11 20.0kV/400V]── → Section 1: 84_MVLV087413_Transformer  (39 buses, 76 loads)
+    └── 84_MVLV131148
+        ├── 84_MVLV081429
+        │   ├── [84_MVLV081429_Transformer: Dyn11 20.0kV/400V]── → Section 3: 84_MVLV081429_Transformer  (2 buses, 2 loads)
+        │   └── 84_MVLV089689
+        │       ├── 84_MVLV007371 (L1,L2)
+        │       │   └── 84_MVLV064583
+        │       │       └── [84_MVLV064583_Transformer: Dyn11 20.0kV/400V]── → Section 5: 84_MVLV064583_Transformer  (11 buses, 20 loads)
+        │       ├── [84_MVLV089689_Transformer: Dyn11 20.0kV/400V]── → Section 4: 84_MVLV089689_Transformer  (13 buses, 24 loads)
+        │       └── 84_MVLV118408 (L7,L8)
+        │           └── 84_MVLV044849
+        │               ├── [84_MVLV044849_Transformer: Dyn11 20.0kV/400V]── → Section 6: 84_MVLV044849_Transformer  (10 buses, 18 loads)
+        │               └── 84_MVLV089500 (L5,L6)
+        │                   └── 84_MVLV014216 (L3,L4)
+        │                       └── 84_MVLV100908
+        │                           ├── [84_MVLV100908_Transformer: Dyn11 20.0kV/400V]── → Section 7: 84_MVLV100908_Transformer  (3 buses, 4 loads)
+        │                           └── 84_MVLV153611
+        │                               └── [84_MVLV153611_Transformer: Dyn11 20.0kV/400V]── → Section 8: 84_MVLV153611_Transformer  (9 buses, 16 loads)
+        └── [84_MVLV131148_Transformer: Dyn11 20.0kV/400V]── → Section 2: 84_MVLV131148_Transformer  (13 buses, 24 loads)
+
+Loads (8 total):
+  L1 = 84_MVLV007371_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L2 = 84_MVLV007371_production    0.0 kW  DELTA  terminals: 1,2,3
+  L3 = 84_MVLV014216_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L4 = 84_MVLV014216_production    0.0 kW  DELTA  terminals: 1,2,3
+  L5 = 84_MVLV089500_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L6 = 84_MVLV089500_production    0.0 kW  DELTA  terminals: 1,2,3
+  L7 = 84_MVLV118408_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L8 = 84_MVLV118408_production    0.0 kW  DELTA  terminals: 1,2,3
+
+────────────────────────────────────────────────────────────
+# Section 1: 84_MVLV087413_Transformer  (84_MVLV087413_Transformer: Dyn11 20.0kV/400V,  39 buses)
+
+84_MVLV087413_LV
+├── 84_LVBus0332028 (L1,L2)
+├── 84_LVBus0332030 (L3,L4)
+│   └── 84_LVBus0332031 (L5,L6)
+│       ├── 84_LVBus0332032 (L7,L8)
+│       └── 84_LVBus0332033 (L10,L9)
+│           ├── 84_LVBus0332034 (L11,L12)
+│           ├── 84_LVBus0332035 (L13,L14)
+│           └── 84_LVBus0332036 (L15,L16)
+│               ├── 84_LVBus0332037 (L17,L18)
+│               └── 84_LVBus0332038 (L19,L20)
+├── 84_LVBus0332040 (L21,L22)
+│   └── 84_LVBus0332041 (L23,L24)
+│       ├── 84_LVBus0332042 (L25,L26)
+│       └── 84_LVBus0332043 (L27,L28)
+│           ├── 84_LVBus0332044 (L29,L30)
+│           │   ├── 84_LVBus0332045 (L31,L32)
+│           │   │   └── 84_LVBus0332046 (L33,L34)
+│           │   └── 84_LVBus0332047 (L35,L36)
+│           │       └── 84_LVBus0332048 (L37,L38)
+│           └── 84_LVBus0332049 (L39,L40)
+├── 84_LVBus0332051 (L41,L42)
+├── 84_LVBus0332053 (L43,L44)
+├── 84_LVBus0332055 (L45,L46)
+│   ├── 84_LVBus0332056 (L47,L48)
+│   ├── 84_LVBus0332057 (L49,L50)
+│   └── 84_LVBus0332058 (L51,L52)
+└── 84_LVBus0332060 (L53,L54)
+    ├── 84_LVBus0332061 (L55,L56)
+    │   └── 84_LVBus0332062 (L57,L58)
+    │       ├── 84_LVBus0332063 (L59,L60)
+    │       │   ├── 84_LVBus0332064 (L61,L62)
+    │       │   └── 84_LVBus0332065 (L63,L64)
+    │       ├── 84_LVBus0332066 (L65,L66)
+    │       │   ├── 84_LVBus0332067 (L67,L68)
+    │       │   └── 84_LVBus0332068 (L69,L70)
+    │       │       └── 84_LVBus0332069 (L71,L72)
+    │       └── 84_LVBus0332070 (L73,L74)
+    └── 84_LVBus0332071 (L75,L76)
+
+Loads (76 total):
+  L1 = 84_LVBus0332028_consumption   35.4 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332028_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332030_consumption   6.59 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332030_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332031_consumption  19.02 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332031_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332032_consumption   3.81 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332032_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332033_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332033_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus0332034_consumption  11.68 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus0332034_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus0332035_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus0332035_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus0332036_consumption   0.08 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus0332036_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 84_LVBus0332037_consumption   0.34 kW  WYE  terminals: 1,2,3,n
+  L18 = 84_LVBus0332037_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 84_LVBus0332038_consumption  32.19 kW  WYE  terminals: 1,2,3,n
+  L20 = 84_LVBus0332038_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 84_LVBus0332040_consumption  11.68 kW  WYE  terminals: 1,2,3,n
+  L22 = 84_LVBus0332040_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 84_LVBus0332041_consumption   8.55 kW  WYE  terminals: 1,2,3,n
+  L24 = 84_LVBus0332041_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 84_LVBus0332042_consumption   6.71 kW  WYE  terminals: 1,2,3,n
+  L26 = 84_LVBus0332042_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 84_LVBus0332043_consumption   1.33 kW  WYE  terminals: 1,2,3,n
+  L28 = 84_LVBus0332043_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 84_LVBus0332044_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L30 = 84_LVBus0332044_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 84_LVBus0332045_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L32 = 84_LVBus0332045_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 84_LVBus0332046_consumption   9.06 kW  WYE  terminals: 1,2,3,n
+  L34 = 84_LVBus0332046_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 84_LVBus0332047_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L36 = 84_LVBus0332047_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 84_LVBus0332048_consumption  11.92 kW  WYE  terminals: 1,2,3,n
+  L38 = 84_LVBus0332048_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 84_LVBus0332049_consumption   7.19 kW  WYE  terminals: 1,2,3,n
+  L40 = 84_LVBus0332049_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 84_LVBus0332051_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L42 = 84_LVBus0332051_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 84_LVBus0332053_consumption  18.52 kW  WYE  terminals: 1,2,3,n
+  L44 = 84_LVBus0332053_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 84_LVBus0332055_consumption   3.84 kW  WYE  terminals: 1,2,3,n
+  L46 = 84_LVBus0332055_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 84_LVBus0332056_consumption  49.68 kW  WYE  terminals: 1,2,3,n
+  L48 = 84_LVBus0332056_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 84_LVBus0332057_consumption   1.05 kW  WYE  terminals: 1,2,3,n
+  L50 = 84_LVBus0332057_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 26 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 2: 84_MVLV131148_Transformer  (84_MVLV131148_Transformer: Dyn11 20.0kV/400V,  13 buses)
+
+84_MVLV131148_LV
+├── 84_LVBus0332094 (L1,L2)
+├── 84_LVBus0332096 (L3,L4)
+│   ├── 84_LVBus0332097 (L5,L6)
+│   └── 84_LVBus0332098 (L7,L8)
+├── 84_LVBus0332100 (L10,L9)
+│   └── 84_LVBus0332101 (L11,L12)
+└── 84_LVBus0332103 (L13,L14)
+    └── 84_LVBus0332104 (L15,L16)
+        └── 84_LVBus0332105 (L17,L18)
+            ├── 84_LVBus0332106 (L19,L20)
+            │   └── 84_LVBus0332107 (L21,L22)
+            └── 84_LVBus0332108 (L23,L24)
+
+Loads (24 total):
+  L1 = 84_LVBus0332094_consumption   4.04 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332094_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332096_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332096_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332097_consumption   9.79 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332097_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332098_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332098_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332100_consumption   1.66 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332100_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus0332101_consumption   4.53 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus0332101_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus0332103_consumption  10.18 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus0332103_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus0332104_consumption   1.72 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus0332104_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 84_LVBus0332105_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 84_LVBus0332105_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 84_LVBus0332106_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 84_LVBus0332106_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 84_LVBus0332107_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 84_LVBus0332107_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 84_LVBus0332108_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L24 = 84_LVBus0332108_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 3: 84_MVLV081429_Transformer  (84_MVLV081429_Transformer: Dyn11 20.0kV/400V,  2 buses)
+
+84_MVLV081429_LV
+└── 84_LVBus0332026 (L1,L2)
+
+Loads (2 total):
+  L1 = 84_LVBus0332026_consumption   3.83 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332026_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 4: 84_MVLV089689_Transformer  (84_MVLV089689_Transformer: Dyn11 20.0kV/400V,  13 buses)
+
+84_MVLV089689_LV
+├── 84_LVBus0332074 (L1,L2)
+│   └── 84_LVBus0332075 (L3,L4)
+│       ├── 84_LVBus0332076 (L5,L6)
+│       │   └── 84_LVBus0332077 (L7,L8)
+│       └── 84_LVBus0332078 (L10,L9)
+│           └── 84_LVBus0332079 (L11,L12)
+├── 84_LVBus0332081 (L13,L14)
+├── 84_LVBus0332083 (L15,L16)
+│   ├── 84_LVBus0332084 (L17,L18)
+│   │   └── 84_LVBus0332085 (L19,L20)
+│   └── 84_LVBus0332086 (L21,L22)
+└── 84_LVBus0332088 (L23,L24)
+
+Loads (24 total):
+  L1 = 84_LVBus0332074_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332074_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332075_consumption  12.52 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332075_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332076_consumption  29.38 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332076_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332077_consumption  15.71 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332077_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332078_consumption  23.63 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332078_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus0332079_consumption  32.23 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus0332079_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus0332081_consumption  23.06 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus0332081_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus0332083_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus0332083_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 84_LVBus0332084_consumption  30.24 kW  WYE  terminals: 1,2,3,n
+  L18 = 84_LVBus0332084_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 84_LVBus0332085_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 84_LVBus0332085_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 84_LVBus0332086_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 84_LVBus0332086_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 84_LVBus0332088_consumption   9.15 kW  WYE  terminals: 1,2,3,n
+  L24 = 84_LVBus0332088_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 5: 84_MVLV064583_Transformer  (84_MVLV064583_Transformer: Dyn11 20.0kV/400V,  11 buses)
+
+84_MVLV064583_LV
+├── 84_LVBus0332007 (L1,L2)
+│   └── 84_LVBus0332008 (L3,L4)
+├── 84_LVBus0332010 (L5,L6)
+├── 84_LVBus0332012 (L7,L8)
+├── 84_LVBus0332014 (L10,L9)
+├── 84_LVBus0332016 (L11,L12)
+├── 84_LVBus0332018 (L13,L14)
+├── 84_LVBus0332020 (L15,L16)
+├── 84_LVBus0332022 (L17,L18)
+└── 84_LVBus0332024 (L19,L20)
+
+Loads (20 total):
+  L1 = 84_LVBus0332007_consumption  25.86 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332007_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332008_consumption  42.16 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332008_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332010_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332010_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332012_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332012_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332014_consumption  53.11 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332014_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus0332016_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus0332016_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus0332018_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus0332018_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus0332020_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus0332020_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 84_LVBus0332022_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 84_LVBus0332022_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 84_LVBus0332024_consumption  40.58 kW  WYE  terminals: 1,2,3,n
+  L20 = 84_LVBus0332024_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 6: 84_MVLV044849_Transformer  (84_MVLV044849_Transformer: Dyn11 20.0kV/400V,  10 buses)
+
+84_MVLV044849_LV
+├── 84_LVBus0331997 (L1,L2)
+│   └── 84_LVBus2122110 (L11,L12)
+├── 84_LVBus0331999 (L3,L4)
+├── 84_LVBus0332001 (L5,L6)
+├── 84_LVBus0332003 (L7,L8)
+│   └── 84_LVBus2263562 (L13,L14)
+│       └── 84_LVBus2263563 (L15,L16)
+│           └── 84_LVBus2263564 (L17,L18)
+└── 84_LVBus0332005 (L10,L9)
+
+Loads (18 total):
+  L1 = 84_LVBus0331997_consumption  63.78 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0331997_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0331999_consumption  40.57 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0331999_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332001_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332001_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332003_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332003_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332005_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332005_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus2122110_consumption  49.06 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus2122110_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus2263562_consumption   3.28 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus2263562_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus2263563_consumption   0.64 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus2263563_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 84_LVBus2263564_consumption 115.55 kW  WYE  terminals: 1,2,3,n
+  L18 = 84_LVBus2263564_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 7: 84_MVLV100908_Transformer  (84_MVLV100908_Transformer: Dyn11 20.0kV/400V,  3 buses)
+
+84_MVLV100908_LV
+├── 84_LVBus0332090 (L1,L2)
+└── 84_LVBus0332092 (L3,L4)
+
+Loads (4 total):
+  L1 = 84_LVBus0332090_consumption  22.03 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332090_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332092_consumption  24.01 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332092_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 8: 84_MVLV153611_Transformer  (84_MVLV153611_Transformer: Dyn11 20.0kV/400V,  9 buses)
+
+84_MVLV153611_LV
+├── 84_LVBus0332110 (L1,L2)
+├── 84_LVBus0332112 (L3,L4)
+├── 84_LVBus0332114 (L5,L6)
+├── 84_LVBus0332116 (L7,L8)
+└── 84_LVBus0332118 (L10,L9)
+    ├── 84_LVBus0332119 (L11,L12)
+    └── 84_LVBus0332120 (L13,L14)
+        └── 84_LVBus0332121 (L15,L16)
+
+Loads (16 total):
+  L1 = 84_LVBus0332110_consumption  18.26 kW  WYE  terminals: 1,2,3,n
+  L2 = 84_LVBus0332110_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 84_LVBus0332112_consumption  37.18 kW  WYE  terminals: 1,2,3,n
+  L4 = 84_LVBus0332112_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 84_LVBus0332114_consumption  15.64 kW  WYE  terminals: 1,2,3,n
+  L6 = 84_LVBus0332114_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 84_LVBus0332116_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 84_LVBus0332116_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 84_LVBus0332118_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 84_LVBus0332118_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 84_LVBus0332119_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 84_LVBus0332119_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 84_LVBus0332120_consumption   16.1 kW  WYE  terminals: 1,2,3,n
+  L14 = 84_LVBus0332120_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 84_LVBus0332121_consumption   4.97 kW  WYE  terminals: 1,2,3,n
+  L16 = 84_LVBus0332121_production    0.0 kW  WYE  terminals: 1,2,3,n

@@ -71,11 +71,11 @@ The data is organised in three tiers, from raw source material to ready-to-use
 benchmarks:
 
 ### 1. `test/data/` — raw source networks
-Openly-licensed **OpenDSS** files (line codes, lines, loads, transformers,
+Openly-licensed source models: **OpenDSS** files (line codes, lines, loads, transformers,
 `Master.dss`). This is the *starting material* — use it to develop your own
 benchmarks, reproduce our conversions, or study realistic network structure.
 Includes the ENWL four-wire LV variants (Kron-reduced and phase-to-neutral
-forms) and the scaled D-Suite LV networks.
+forms), the scaled D-Suite LV networks, and 150 representative French MV/LV networks in Roseau JSON v5.
 
 ### 2. `output/` — power-flow (PF) cases in BMOPF JSON
 The raw networks converted into clean, schema-conformant BMOPF JSON. These are
@@ -98,8 +98,10 @@ bounds, objectives and — where available — **reference solutions**.
   variants) with per-timestep BMOPF cases, solved results (`*_result_si.json`,
   `*_result_pu.json`), daily/heatmap figures and a summary.
 
+`scripts/FrenchPowerGrids/` contains the Python/Julia conversion and validation workflow for the French dataset.
+
 `scripts/` contains the Julia pipeline (`generate_output.jl`,
-`run_benchmark.jl`, …) that produced all of the above — your reference for how
+`run_benchmark.jl`, …) that produced the OpenDSS-sourced cases — your reference for how
 cases are generated and how to regenerate or extend them.
 
 ## How to use it
@@ -130,10 +132,25 @@ documented in a `License.md`/`license.md` in the data directory.
 | `LV`, `MV`, `Master.dss` (combined), `MVLVmeshed` | **CC BY-NC-SA 4.0** | **no** (non-commercial, share-alike) | CSIRO Australian MV/LV feeder set, [10.25919/ghnz-bk28](https://doi.org/10.25919/ghnz-bk28) |
 | `dsuite_networks_scaled_v1.1` | CC BY 4.0 | yes | D-Suite LV networks (Newcastle University), [10.25405/data.ncl.27175317](https://doi.org/10.25405/data.ncl.27175317) |
 | `SWER`, `pf_comparison`, small fixtures | CC BY 4.0 | yes | authored for BMOPFTools |
+| `FrenchPowerGrids` | Etalab Open Licence 2.0 (`etalab-2.0`) | yes | Seddik Yassine Abdelouadoud / [original dataset](https://www.data.gouv.fr/fr/datasets/departs-hta-representatifs-pour-lanalyse-des-reseaux-de-distribution-francais/) |
 
 > **Note:** CC BY-NC-SA derivatives must be redistributed under the same
 > non-commercial/share-alike terms — plan accordingly if you are building a
 > commercial offering on these cases. When in doubt, prefer the CC BY 4.0 sets.
+
+## Representative French power-flow cases
+
+[`test/data/FrenchPowerGrids/`](test/data/FrenchPowerGrids/) preserves the 150 source models and cluster weights;
+[`output/FrenchPowerGrids/original/`](output/FrenchPowerGrids/original/) contains their BMOPF conversions with bus
+longitude/latitude and explicit LV neutrals. The dataset-specific licenses retain Etalab Open Licence 2.0 attribution.
+The conversion/validation scripts and tests have a separate MIT license.
+
+All 150 cases converged in Tellegen's native multiconductor PF solver and passed independent electrical checks.
+Five feeders also agree with fresh Roseau engine solves; the other 145 exceed the public trial license's 50-bus limit.
+113 cases have voltages below their input bounds, and transformer loading constraints have a documented source/target
+difference. These are PF models with reference solutions; future OPF curation needs its own feasibility checks.
+See the [mapping and evidence](output/FrenchPowerGrids/README.md) and
+[reproduction commands](scripts/FrenchPowerGrids/README.md).
 
 ## Feature tagging & discovery
 

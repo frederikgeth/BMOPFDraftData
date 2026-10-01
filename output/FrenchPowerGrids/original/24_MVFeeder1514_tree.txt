@@ -1,0 +1,35 @@
+# Network graph  (17 buses)
+
+24_ORCH5 (SRC)
+└── 24_MVLV72699 (L13,L14)
+    └── 24_MVBus48697
+        └── 24_MVBus48698
+            ├── 24_MVBus48699
+            └── 24_MVBus48700
+                ├── 24_MVBus48701
+                │   └── 24_MVLV05004 (L3,L4)
+                │       └── 24_MVBus48702
+                │           └── 24_MVLV20546 (L10,L9)
+                │               └── 24_MVBus48703
+                │                   └── 24_MVLV22635
+                │                       └── [24_MVLV22635_Transformer: Dyn11 20.0kV/400V]── 24_MVLV22635_LV
+                │                           └── 24_LVBus393162 (L1,L2)
+                └── 24_MVLV06971 (L5,L6)
+                    ├── 24_MVLV10086 (L7,L8)
+                    └── 24_MVLV44740 (L11,L12)
+
+Loads (14 total):
+  L1 = 24_LVBus393162_consumption   54.2 kW  WYE  terminals: 1,2,3,n
+  L2 = 24_LVBus393162_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 24_MVLV05004_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L4 = 24_MVLV05004_production    0.0 kW  DELTA  terminals: 1,2,3
+  L5 = 24_MVLV06971_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L6 = 24_MVLV06971_production    0.0 kW  DELTA  terminals: 1,2,3
+  L7 = 24_MVLV10086_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L8 = 24_MVLV10086_production    0.0 kW  DELTA  terminals: 1,2,3
+  L9 = 24_MVLV20546_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L10 = 24_MVLV20546_production    0.0 kW  DELTA  terminals: 1,2,3
+  L11 = 24_MVLV44740_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L12 = 24_MVLV44740_production    0.0 kW  DELTA  terminals: 1,2,3
+  L13 = 24_MVLV72699_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L14 = 24_MVLV72699_production    0.0 kW  DELTA  terminals: 1,2,3

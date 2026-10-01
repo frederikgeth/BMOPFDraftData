@@ -1,0 +1,977 @@
+# MV backbone  (23 buses,  12 LV sections)
+
+93_CASTI (SRC)
+└── 93_MVLV28538 (L3,L4)
+    └── 93_MVLV43313 (L5,L6)
+        ├── 93_MVLV22736
+        │   └── [93_MVLV22736_Transformer: Dyn11 20.0kV/400V]── → Section 1: 93_MVLV22736_Transformer  (28 buses, 54 loads)
+        ├── 93_MVLV51392
+        │   └── [93_MVLV51392_Transformer: Dyn11 20.0kV/400V]── → Section 2: 93_MVLV51392_Transformer  (51 buses, 100 loads)
+        └── 93_MVLV62792
+            ├── 93_MVLV07194
+            │   ├── [93_MVLV07194_Transformer: Dyn11 20.0kV/400V]── → Section 4: 93_MVLV07194_Transformer  (17 buses, 32 loads)
+            │   └── 93_MVLV33782
+            │       ├── 93_MVLV13007 (L1,L2)
+            │       │   ├── 93_MVBus07226
+            │       │   │   └── 93_MVBus07227
+            │       │   │       ├── 93_MVBus07228
+            │       │   │       │   └── 93_MVLV73686
+            │       │   │       │       ├── 93_MVBus07229
+            │       │   │       │       │   └── 93_MVBus07230
+            │       │   │       │       │       └── 93_MVLV59994
+            │       │   │       │       │           └── [93_MVLV59994_Transformer: Dyn11 20.0kV/400V]── → Section 12: 93_MVLV59994_Transformer  (7 buses, 12 loads)
+            │       │   │       │       └── [93_MVLV73686_Transformer: Dyn11 20.0kV/400V]── → Section 10: 93_MVLV73686_Transformer  (42 buses, 82 loads)
+            │       │   │       └── 93_MVLV43787
+            │       │   │           └── [93_MVLV43787_Transformer: Dyn11 20.0kV/400V]── → Section 8: 93_MVLV43787_Transformer  (5 buses, 8 loads)
+            │       │   └── 93_MVLV11783
+            │       │       ├── [93_MVLV11783_Transformer: Dyn11 20.0kV/400V]── → Section 6: 93_MVLV11783_Transformer  (16 buses, 30 loads)
+            │       │       └── 93_MVLV26902
+            │       │           ├── [93_MVLV26902_Transformer: Dyn11 20.0kV/400V]── → Section 7: 93_MVLV26902_Transformer  (158 buses, 314 loads)
+            │       │           └── 93_MVLV47708
+            │       │               ├── 93_MVLV31514
+            │       │               │   ├── [93_MVLV31514_Transformer: Dyn11 20.0kV/400V]── → Section 11: 93_MVLV31514_Transformer  (32 buses, 62 loads)
+            │       │               │   └── 93_MVLV68589 (L7,L8)
+            │       │               │       └── 93_MVBus07231
+            │       │               └── [93_MVLV47708_Transformer: Dyn11 20.0kV/400V]── → Section 9: 93_MVLV47708_Transformer  (34 buses, 66 loads)
+            │       └── [93_MVLV33782_Transformer: Dyn11 20.0kV/400V]── → Section 5: 93_MVLV33782_Transformer  (11 buses, 20 loads)
+            └── [93_MVLV62792_Transformer: Dyn11 20.0kV/400V]── → Section 3: 93_MVLV62792_Transformer  (17 buses, 32 loads)
+
+Loads (8 total):
+  L1 = 93_MVLV13007_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L2 = 93_MVLV13007_production    0.0 kW  DELTA  terminals: 1,2,3
+  L3 = 93_MVLV28538_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L4 = 93_MVLV28538_production    0.0 kW  DELTA  terminals: 1,2,3
+  L5 = 93_MVLV43313_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L6 = 93_MVLV43313_production    0.0 kW  DELTA  terminals: 1,2,3
+  L7 = 93_MVLV68589_consumption    0.0 kW  DELTA  terminals: 1,2,3
+  L8 = 93_MVLV68589_production    0.0 kW  DELTA  terminals: 1,2,3
+
+────────────────────────────────────────────────────────────
+# Section 1: 93_MVLV22736_Transformer  (93_MVLV22736_Transformer: Dyn11 20.0kV/400V,  28 buses)
+
+93_MVLV22736_LV
+├── 93_LVBus0303690 (L1,L2)
+│   └── 93_LVBus0303691 (L3,L4)
+│       └── 93_LVBus0303692 (L5,L6)
+│           └── 93_LVBus0303693 (L7,L8)
+├── 93_LVBus0303695 (L10,L9)
+└── 93_LVBus0303697 (L11,L12)
+    └── 93_LVBus0303698 (L13,L14)
+        └── 93_LVBus0303699 (L15,L16)
+            ├── 93_LVBus0303700 (L17,L18)
+            └── 93_LVBus0303701 (L19,L20)
+                ├── 93_LVBus0303702 (L21,L22)
+                │   ├── 93_LVBus0303703 (L23,L24)
+                │   ├── 93_LVBus0303704 (L25,L26)
+                │   │   ├── 93_LVBus0303705 (L27,L28)
+                │   │   ├── 93_LVBus0303706 (L29,L30)
+                │   │   │   └── 93_LVBus0303707 (L31,L32)
+                │   │   ├── 93_LVBus0303708 (L33,L34)
+                │   │   │   └── 93_LVBus0303709 (L35,L36)
+                │   │   │       ├── 93_LVBus0303710 (L37,L38)
+                │   │   │       ├── 93_LVBus0303711 (L39,L40)
+                │   │   │       └── 93_LVBus0303712 (L41,L42)
+                │   │   │           └── 93_LVBus0303713 (L43,L44)
+                │   │   └── 93_LVBus0303714 (L45,L46)
+                │   └── 93_LVBus0303715 (L47,L48)
+                ├── 93_LVBus0303716 (L49,L50)
+                ├── 93_LVBus0303717 (L51,L52)
+                └── 93_LVBus0303718 (L53,L54)
+
+Loads (54 total):
+  L1 = 93_LVBus0303690_consumption   0.14 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303690_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303691_consumption  16.86 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303691_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303692_consumption   0.54 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303692_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303693_consumption   5.67 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303693_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303695_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303695_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303697_consumption    5.6 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303697_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303698_consumption   1.47 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303698_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303699_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303699_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303700_consumption   0.21 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303700_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303701_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303701_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303702_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303702_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303703_consumption    7.8 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303703_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303704_consumption   1.92 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303704_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303705_consumption   1.77 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303705_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303706_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303706_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303707_consumption   4.96 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303707_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303708_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303708_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303709_consumption   0.24 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303709_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303710_consumption   6.34 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303710_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303711_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303711_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus0303712_consumption   4.45 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus0303712_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus0303713_consumption   3.07 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus0303713_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus0303714_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus0303714_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus0303715_consumption   3.13 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus0303715_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus0303716_consumption   3.21 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus0303716_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 4 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 2: 93_MVLV51392_Transformer  (93_MVLV51392_Transformer: Dyn11 20.0kV/400V,  51 buses)
+
+93_MVLV51392_LV
+├── 93_LVBus0303843 (L1,L2)
+│   ├── 93_LVBus0303844 (L3,L4)
+│   │   └── 93_LVBus0303845 (L5,L6)
+│   │       ├── 93_LVBus0303846 (L7,L8)
+│   │       ├── 93_LVBus0303847 (L10,L9)
+│   │       │   ├── 93_LVBus0303848 (L11,L12)
+│   │       │   │   └── 93_LVBus0303849 (L13,L14)
+│   │       │   └── 93_LVBus0303850 (L15,L16)
+│   │       └── 93_LVBus0303851 (L17,L18)
+│   │           └── 93_LVBus0303852 (L19,L20)
+│   └── 93_LVBus0303853 (L21,L22)
+│       ├── 93_LVBus0303854 (L23,L24)
+│       └── 93_LVBus0303855 (L25,L26)
+├── 93_LVBus0303857 (L27,L28)
+│   ├── 93_LVBus0303858 (L29,L30)
+│   │   ├── 93_LVBus0303859 (L31,L32)
+│   │   │   ├── 93_LVBus0303860 (L33,L34)
+│   │   │   │   ├── 93_LVBus0303861 (L35,L36)
+│   │   │   │   └── 93_LVBus0303862 (L37,L38)
+│   │   │   ├── 93_LVBus0303863 (L39,L40)
+│   │   │   │   └── 93_LVBus0303864 (L41,L42)
+│   │   │   └── 93_LVBus0303865 (L43,L44)
+│   │   └── 93_LVBus0303866 (L45,L46)
+│   └── 93_LVBus0303867 (L47,L48)
+│       └── 93_LVBus0303868 (L49,L50)
+├── 93_LVBus0303870 (L51,L52)
+│   └── 93_LVBus0303871 (L53,L54)
+│       └── 93_LVBus0303872 (L55,L56)
+│           ├── 93_LVBus0303873 (L57,L58)
+│           └── 93_LVBus0303874 (L59,L60)
+├── 93_LVBus0303876 (L61,L62)
+│   └── 93_LVBus0303877 (L63,L64)
+│       └── 93_LVBus0303878 (L65,L66)
+│           ├── 93_LVBus0303879 (L67,L68)
+│           ├── 93_LVBus0303880 (L69,L70)
+│           │   └── 93_LVBus0303881 (L71,L72)
+│           └── 93_LVBus0303882 (L73,L74)
+│               ├── 93_LVBus0303883 (L75,L76)
+│               │   └── 93_LVBus0303884 (L77,L78)
+│               │       └── 93_LVBus0303885 (L79,L80)
+│               │           ├── 93_LVBus0303886 (L81,L82)
+│               │           │   └── 93_LVBus0303887 (L83,L84)
+│               │           └── 93_LVBus0303888 (L85,L86)
+│               │               └── 93_LVBus0303889 (L87,L88)
+│               └── 93_LVBus0303890 (L89,L90)
+│                   ├── 93_LVBus0303891 (L91,L92)
+│                   └── 93_LVBus0303892 (L93,L94)
+│                       └── 93_LVBus0303893 (L95,L96)
+│                           └── 93_LVBus0303894 (L97,L98)
+└── 93_LVBus0303896 (L100,L99)
+
+Loads (100 total):
+  L1 = 93_LVBus0303843_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303843_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303844_consumption  12.39 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303844_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303845_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303845_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303846_consumption   5.34 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303846_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303847_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303847_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303848_consumption   1.26 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303848_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303849_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303849_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303850_consumption  10.08 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303850_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303851_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303851_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303852_consumption   2.91 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303852_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303853_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303853_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303854_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303854_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303855_consumption   5.58 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303855_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303857_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303857_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303858_consumption   1.46 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303858_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303859_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303859_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303860_consumption   0.94 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303860_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303861_consumption   0.13 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303861_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303862_consumption   2.43 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303862_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303863_consumption   1.85 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303863_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus0303864_consumption  12.68 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus0303864_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus0303865_consumption   6.56 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus0303865_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus0303866_consumption   0.68 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus0303866_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus0303867_consumption   0.33 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus0303867_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus0303868_consumption   2.35 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus0303868_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 50 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 3: 93_MVLV62792_Transformer  (93_MVLV62792_Transformer: Dyn11 20.0kV/400V,  17 buses)
+
+93_MVLV62792_LV
+├── 93_LVBus0303909 (L1,L2)
+│   ├── 93_LVBus0303910 (L3,L4)
+│   └── 93_LVBus0303911 (L5,L6)
+│       ├── 93_LVBus0303912 (L7,L8)
+│       │   └── 93_LVBus0303913 (L10,L9)
+│       │       └── 93_LVBus0303914 (L11,L12)
+│       └── 93_LVBus0303915 (L13,L14)
+│           └── 93_LVBus0303916 (L15,L16)
+├── 93_LVBus0303918 (L17,L18)
+└── 93_LVBus0303920 (L19,L20)
+    ├── 93_LVBus0303921 (L21,L22)
+    └── 93_LVBus0303922 (L23,L24)
+        └── 93_LVBus0303923 (L25,L26)
+            ├── 93_LVBus0303924 (L27,L28)
+            ├── 93_LVBus0303925 (L29,L30)
+            └── 93_LVBus0303926 (L31,L32)
+
+Loads (32 total):
+  L1 = 93_LVBus0303909_consumption   0.77 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303909_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303910_consumption    2.1 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303910_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303911_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303911_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303912_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303912_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303913_consumption   0.19 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303913_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303914_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303914_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303915_consumption   1.14 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303915_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303916_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303916_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303918_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303918_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303920_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303920_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303921_consumption    0.7 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303921_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303922_consumption   3.52 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303922_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303923_consumption   3.05 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303923_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303924_consumption   4.02 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303924_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303925_consumption   1.48 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303925_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303926_consumption   0.37 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303926_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 4: 93_MVLV07194_Transformer  (93_MVLV07194_Transformer: Dyn11 20.0kV/400V,  17 buses)
+
+93_MVLV07194_LV
+├── 93_LVBus0303652 (L1,L2)
+│   └── 93_LVBus0303653 (L3,L4)
+└── 93_LVBus0303655 (L5,L6)
+    └── 93_LVBus0303656 (L7,L8)
+        ├── 93_LVBus0303657 (L10,L9)
+        └── 93_LVBus0303658 (L11,L12)
+            ├── 93_LVBus0303659 (L13,L14)
+            └── 93_LVBus0303660 (L15,L16)
+                ├── 93_LVBus0303661 (L17,L18)
+                ├── 93_LVBus0303662 (L19,L20)
+                │   └── 93_LVBus0303663 (L21,L22)
+                │       ├── 93_LVBus0303664 (L23,L24)
+                │       ├── 93_LVBus0303665 (L25,L26)
+                │       └── 93_LVBus0303666 (L27,L28)
+                │           └── 93_LVBus0303667 (L29,L30)
+                └── 93_LVBus0303668 (L31,L32)
+
+Loads (32 total):
+  L1 = 93_LVBus0303652_consumption   1.32 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303652_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303653_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303653_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303655_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303655_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303656_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303656_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303657_consumption   0.33 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303657_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303658_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303658_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303659_consumption   0.22 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303659_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303660_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303660_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303661_consumption   1.37 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303661_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303662_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303662_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303663_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303663_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303664_consumption   0.77 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303664_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303665_consumption   0.75 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303665_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303666_consumption   4.75 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303666_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303667_consumption   0.63 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303667_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303668_consumption   0.13 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303668_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 5: 93_MVLV33782_Transformer  (93_MVLV33782_Transformer: Dyn11 20.0kV/400V,  11 buses)
+
+93_MVLV33782_LV
+├── 93_LVBus0303787 (L1,L2)
+│   ├── 93_LVBus0303788 (L3,L4)
+│   │   └── 93_LVBus0303789 (L5,L6)
+│   │       └── 93_LVBus0303790 (L7,L8)
+│   │           └── 93_LVBus0303791 (L10,L9)
+│   └── 93_LVBus0303792 (L11,L12)
+│       └── 93_LVBus0303793 (L13,L14)
+│           ├── 93_LVBus0303794 (L15,L16)
+│           └── 93_LVBus0303795 (L17,L18)
+└── 93_LVBus0303797 (L19,L20)
+
+Loads (20 total):
+  L1 = 93_LVBus0303787_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303787_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303788_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303788_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303789_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303789_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303790_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303790_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303791_consumption   9.77 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303791_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303792_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303792_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303793_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303793_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303794_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303794_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303795_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303795_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303797_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303797_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 6: 93_MVLV11783_Transformer  (93_MVLV11783_Transformer: Dyn11 20.0kV/400V,  16 buses)
+
+93_MVLV11783_LV
+├── 93_LVBus0303670 (L1,L2)
+│   └── 93_LVBus0303671 (L3,L4)
+│       └── 93_LVBus0303672 (L5,L6)
+│           └── 93_LVBus0303673 (L7,L8)
+│               ├── 93_LVBus0303674 (L10,L9)
+│               └── 93_LVBus0303675 (L11,L12)
+├── 93_LVBus0303677 (L13,L14)
+│   └── 93_LVBus0303678 (L15,L16)
+│       ├── 93_LVBus0303679 (L17,L18)
+│       │   └── 93_LVBus0303680 (L19,L20)
+│       └── 93_LVBus0303681 (L21,L22)
+└── 93_LVBus0303683 (L23,L24)
+    └── 93_LVBus0303684 (L25,L26)
+        └── 93_LVBus0303685 (L27,L28)
+            └── 93_LVBus0303686 (L29,L30)
+
+Loads (30 total):
+  L1 = 93_LVBus0303670_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303670_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303671_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303671_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303672_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303672_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303673_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303673_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303674_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303674_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303675_consumption   0.24 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303675_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303677_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303677_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303678_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303678_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303679_consumption   0.17 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303679_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303680_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303680_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303681_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303681_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303683_consumption   4.52 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303683_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303684_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303684_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303685_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303685_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303686_consumption   0.78 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303686_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 7: 93_MVLV26902_Transformer  (93_MVLV26902_Transformer: Dyn11 20.0kV/400V,  158 buses)
+
+93_MVLV26902_LV
+├── 93_LVBus0303720 (L1,L2)
+│   ├── 93_LVBus0303721 (L3,L4)
+│   │   └── 93_LVBus0303722 (L5,L6)
+│   │       └── 93_LVBus0303723 (L7,L8)
+│   │           └── 93_LVBus0303724 (L10,L9)
+│   │               ├── 93_LVBus0303725 (L11,L12)
+│   │               └── 93_LVBus0303726 (L13,L14)
+│   ├── 93_LVBus0303727 (L15,L16)
+│   └── 93_LVBus0303728 (L17,L18)
+│       ├── 93_LVBus0303729 (L19,L20)
+│       └── 93_LVBus0303730 (L21,L22)
+├── 93_LVBus0303732 (L23,L24)
+│   └── 93_LVBus0303733 (L25,L26)
+│       ├── 93_LVBus0303734 (L27,L28)
+│       │   ├── 93_LVBus0303735 (L29,L30)
+│       │   │   └── 93_LVBus0303736 (L31,L32)
+│       │   │       └── 93_LVBus0303737 (L33,L34)
+│       │   │           └── 93_LVBus0303738 (L35,L36)
+│       │   │               ├── 93_LVBus0303739 (L37,L38)
+│       │   │               │   └── 93_LVBus0303740 (L39,L40)
+│       │   │               └── 93_LVBus0303741 (L41,L42)
+│       │   │                   └── 93_LVBus1430554 (L79,L80)
+│       │   │                       └── 93_LVBus1430555 (L81,L82)
+│       │   │                           ├── 93_LVBus1430556 (L83,L84)
+│       │   │                           │   └── 93_LVBus1430557 (L85,L86)
+│       │   │                           │       ├── 93_LVBus1430561 (L93,L94)
+│       │   │                           │       │   └── 93_LVBus1430562 (L95,L96)
+│       │   │                           │       │       └── 93_LVBus1430563 (L97,L98)
+│       │   │                           │       │           └── 93_LVBus1430564 (L100,L99)
+│       │   │                           │       │               └── 93_LVBus1430565 (L101,L102)
+│       │   │                           │       │                   ├── 93_LVBus1430566 (L103,L104)
+│       │   │                           │       │                   └── 93_LVBus1430567 (L105,L106)
+│       │   │                           │       │                       └── 93_LVBus1430568 (L107,L108)
+│       │   │                           │       │                           └── 93_LVBus1430583 (L137,L138)
+│       │   │                           │       │                               ├── 93_LVBus1430584 (L139,L140)
+│       │   │                           │       │                               │   └── 93_LVBus1430585 (L141,L142)
+│       │   │                           │       │                               │       ├── 93_LVBus1430591 (L153,L154)
+│       │   │                           │       │                               │       │   └── 93_LVBus1430592 (L155,L156)
+│       │   │                           │       │                               │       │       └── 93_LVBus1430593 (L157,L158)
+│       │   │                           │       │                               │       │           ├── 93_LVBus1430594 (L159,L160)
+│       │   │                           │       │                               │       │           └── 93_LVBus1430595 (L161,L162)
+│       │   │                           │       │                               │       │               ├── 93_LVBus1430596 (L163,L164)
+│       │   │                           │       │                               │       │               │   └── 93_LVBus1430597 (L165,L166)
+│       │   │                           │       │                               │       │               └── 93_LVBus1430598 (L167,L168)
+│       │   │                           │       │                               │       ├── 93_LVBus1430599 (L169,L170)
+│       │   │                           │       │                               │       │   └── 93_LVBus1430600 (L171,L172)
+│       │   │                           │       │                               │       ├── 93_LVBus1430601 (L173,L174)
+│       │   │                           │       │                               │       │   ├── 93_LVBus1430602 (L175,L176)
+│       │   │                           │       │                               │       │   │   ├── 93_LVBus1430603 (L177,L178)
+│       │   │                           │       │                               │       │   │   │   ├── 93_LVBus1430604 (L179,L180)
+│       │   │                           │       │                               │       │   │   │   │   ├── 93_LVBus1430605 (L181,L182)
+│       │   │                           │       │                               │       │   │   │   │   │   └── 93_LVBus1430606 (L183,L184)
+│       │   │                           │       │                               │       │   │   │   │   │       └── 93_LVBus1430607 (L185,L186)
+│       │   │                           │       │                               │       │   │   │   │   ├── 93_LVBus1430608 (L187,L188)
+│       │   │                           │       │                               │       │   │   │   │   │   ├── 93_LVBus1430609 (L189,L190)
+│       │   │                           │       │                               │       │   │   │   │   │   │   └── 93_LVBus1430610 (L191,L192)
+│       │   │                           │       │                               │       │   │   │   │   │   ├── 93_LVBus1430611 (L193,L194)
+│       │   │                           │       │                               │       │   │   │   │   │   ├── 93_LVBus1430612 (L195,L196)
+│       │   │                           │       │                               │       │   │   │   │   │   │   └── 93_LVBus1430613 (L197,L198)
+│       │   │                           │       │                               │       │   │   │   │   │   │       ├── 93_LVBus1430614 (L199,L200)
+│       │   │                           │       │                               │       │   │   │   │   │   │       └── 93_LVBus1430615 (L201,L202)
+│       │   │                           │       │                               │       │   │   │   │   │   │           ├── 93_LVBus1430616 (L203,L204)
+│       │   │                           │       │                               │       │   │   │   │   │   │           ├── 93_LVBus1430617 (L205,L206)
+│       │   │                           │       │                               │       │   │   │   │   │   │           └── 93_LVBus1430618 (L207,L208)
+│       │   │                           │       │                               │       │   │   │   │   │   │               ├── 93_LVBus1430619 (L209,L210)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   └── 93_LVBus1430620 (L211,L212)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │       └── 93_LVBus1430621 (L213,L214)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │           └── 93_LVBus1430622 (L215,L216)
+│       │   │                           │       │                               │       │   │   │   │   │   │               ├── 93_LVBus1430623 (L217,L218)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   ├── 93_LVBus1430624 (L219,L220)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │   ├── 93_LVBus1430625 (L221,L222)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │   │   ├── 93_LVBus1430626 (L223,L224)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │   │   ├── 93_LVBus1430627 (L225,L226)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │   │   └── 93_LVBus1430628 (L227,L228)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │   └── 93_LVBus1430629 (L229,L230)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │       ├── 93_LVBus1430630 (L231,L232)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │       │   ├── 93_LVBus1430631 (L233,L234)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │       │   └── 93_LVBus1430632 (L235,L236)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │       └── 93_LVBus1430633 (L237,L238)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   │           └── 93_LVBus1430634 (L239,L240)
+│       │   │                           │       │                               │       │   │   │   │   │   │               │   └── 93_LVBus1430635 (L241,L242)
+│       │   │                           │       │                               │       │   │   │   │   │   │               └── 93_LVBus1430636 (L243,L244)
+│       │   │                           │       │                               │       │   │   │   │   │   └── 93_LVBus1430637 (L245,L246)
+│       │   │                           │       │                               │       │   │   │   │   └── 93_LVBus1430638 (L247,L248)
+│       │   │                           │       │                               │       │   │   │   ├── 93_LVBus1430639 (L249,L250)
+│       │   │                           │       │                               │       │   │   │   └── 93_LVBus1430640 (L251,L252)
+│       │   │                           │       │                               │       │   │   ├── 93_LVBus1430641 (L253,L254)
+│       │   │                           │       │                               │       │   │   ├── 93_LVBus1430642 (L255,L256)
+│       │   │                           │       │                               │       │   │   └── 93_LVBus1430643 (L257,L258)
+│       │   │                           │       │                               │       │   └── 93_LVBus1430644 (L259,L260)
+│       │   │                           │       │                               │       ├── 93_LVBus1430645 (L261,L262)
+│       │   │                           │       │                               │       │   └── 93_LVBus1430646 (L263,L264)
+│       │   │                           │       │                               │       │       ├── 93_LVBus1430647 (L265,L266)
+│       │   │                           │       │                               │       │       └── 93_LVBus1430648 (L267,L268)
+│       │   │                           │       │                               │       │           ├── 93_LVBus1430649 (L269,L270)
+│       │   │                           │       │                               │       │           ├── 93_LVBus1430650 (L271,L272)
+│       │   │                           │       │                               │       │           │   └── 93_LVBus1430651 (L273,L274)
+│       │   │                           │       │                               │       │           ├── 93_LVBus1430652 (L275,L276)
+│       │   │                           │       │                               │       │           └── 93_LVBus1430653 (L277,L278)
+│       │   │                           │       │                               │       │               ├── 93_LVBus1430654 (L279,L280)
+│       │   │                           │       │                               │       │               ├── 93_LVBus1430655 (L281,L282)
+│       │   │                           │       │                               │       │               └── 93_LVBus1430656 (L283,L284)
+│       │   │                           │       │                               │       ├── 93_LVBus1430657 (L285,L286)
+│       │   │                           │       │                               │       │   └── 93_LVBus1430658 (L287,L288)
+│       │   │                           │       │                               │       │       ├── 93_LVBus1430659 (L289,L290)
+│       │   │                           │       │                               │       │       │   ├── 93_LVBus1430660 (L291,L292)
+│       │   │                           │       │                               │       │       │   └── 93_LVBus1430661 (L293,L294)
+│       │   │                           │       │                               │       │       │       ├── 93_LVBus1430662 (L295,L296)
+│       │   │                           │       │                               │       │       │       ├── 93_LVBus1430663 (L297,L298)
+│       │   │                           │       │                               │       │       │       └── 93_LVBus1430664 (L299,L300)
+│       │   │                           │       │                               │       │       │           ├── 93_LVBus1430665 (L301,L302)
+│       │   │                           │       │                               │       │       │           ├── 93_LVBus1430666 (L303,L304)
+│       │   │                           │       │                               │       │       │           └── 93_LVBus1430667 (L305,L306)
+│       │   │                           │       │                               │       │       │               └── 93_LVBus1430668 (L307,L308)
+│       │   │                           │       │                               │       │       │                   └── 93_LVBus1430669 (L309,L310)
+│       │   │                           │       │                               │       │       └── 93_LVBus1430670 (L311,L312)
+│       │   │                           │       │                               │       └── 93_LVBus1430671 (L313,L314)
+│       │   │                           │       │                               └── 93_LVBus1430586 (L143,L144)
+│       │   │                           │       │                                   ├── 93_LVBus1430587 (L145,L146)
+│       │   │                           │       │                                   │   └── 93_LVBus1430588 (L147,L148)
+│       │   │                           │       │                                   └── 93_LVBus1430589 (L149,L150)
+│       │   │                           │       │                                       └── 93_LVBus1430590 (L151,L152)
+│       │   │                           │       ├── 93_LVBus1430569 (L109,L110)
+│       │   │                           │       │   └── 93_LVBus1430570 (L111,L112)
+│       │   │                           │       │       └── 93_LVBus1430571 (L113,L114)
+│       │   │                           │       └── 93_LVBus1430572 (L115,L116)
+│       │   │                           │           ├── 93_LVBus1430573 (L117,L118)
+│       │   │                           │           ├── 93_LVBus1430574 (L119,L120)
+│       │   │                           │           ├── 93_LVBus1430575 (L121,L122)
+│       │   │                           │           └── 93_LVBus1430576 (L123,L124)
+│       │   │                           │               ├── 93_LVBus1430577 (L125,L126)
+│       │   │                           │               ├── 93_LVBus1430578 (L127,L128)
+│       │   │                           │               ├── 93_LVBus1430579 (L129,L130)
+│       │   │                           │               │   ├── 93_LVBus1430580 (L131,L132)
+│       │   │                           │               │   └── 93_LVBus1430581 (L133,L134)
+│       │   │                           │               └── 93_LVBus1430582 (L135,L136)
+│       │   │                           └── 93_LVBus1430558 (L87,L88)
+│       │   │                               ├── 93_LVBus1430559 (L89,L90)
+│       │   │                               └── 93_LVBus1430560 (L91,L92)
+│       │   └── 93_LVBus0303742 (L43,L44)
+│       └── 93_LVBus0303743 (L45,L46)
+│           └── 93_LVBus0303744 (L47,L48)
+├── 93_LVBus0303746 (L49,L50)
+│   ├── 93_LVBus0303747 (L51,L52)
+│   │   ├── 93_LVBus0303748 (L53,L54)
+│   │   └── 93_LVBus0303749 (L55,L56)
+│   └── 93_LVBus0303750 (L57,L58)
+└── 93_LVBus0303752 (L59,L60)
+    ├── 93_LVBus0303753 (L61,L62)
+    │   ├── 93_LVBus0303754 (L63,L64)
+    │   └── 93_LVBus0303755 (L65,L66)
+    │       └── 93_LVBus0303756 (L67,L68)
+    │           └── 93_LVBus0303757 (L69,L70)
+    │               └── 93_LVBus0303758 (L71,L72)
+    │                   └── 93_LVBus0303759 (L73,L74)
+    │                       └── 93_LVBus0303760 (L75,L76)
+    └── 93_LVBus0303761 (L77,L78)
+
+Loads (314 total):
+  L1 = 93_LVBus0303720_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303720_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303721_consumption   9.81 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303721_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303722_consumption  11.42 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303722_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303723_consumption   3.48 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303723_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303724_consumption   6.22 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303724_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303725_consumption   0.24 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303725_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303726_consumption   2.27 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303726_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303727_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303727_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303728_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303728_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303729_consumption   5.81 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303729_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303730_consumption  25.02 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303730_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303732_consumption   0.01 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303732_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303733_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303733_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303734_consumption   0.63 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303734_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303735_consumption   0.01 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303735_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303736_consumption   0.02 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303736_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303737_consumption   0.25 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303737_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303738_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303738_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303739_consumption   0.21 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303739_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303740_consumption   0.24 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303740_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus0303741_consumption   0.68 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus0303741_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus0303742_consumption   0.28 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus0303742_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus0303743_consumption   0.07 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus0303743_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus0303744_consumption    0.1 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus0303744_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus0303746_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus0303746_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 264 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 8: 93_MVLV43787_Transformer  (93_MVLV43787_Transformer: Dyn11 20.0kV/400V,  5 buses)
+
+93_MVLV43787_LV
+├── 93_LVBus0303799 (L1,L2)
+├── 93_LVBus0303801 (L3,L4)
+└── 93_LVBus0303803 (L5,L6)
+    └── 93_LVBus0303804 (L7,L8)
+
+Loads (8 total):
+  L1 = 93_LVBus0303799_consumption   0.47 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303799_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303801_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303801_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303803_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303803_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303804_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303804_production    0.0 kW  WYE  terminals: 1,2,3,n
+
+────────────────────────────────────────────────────────────
+# Section 9: 93_MVLV47708_Transformer  (93_MVLV47708_Transformer: Dyn11 20.0kV/400V,  34 buses)
+
+93_MVLV47708_LV
+├── 93_LVBus0303806 (L1,L2)
+│   └── 93_LVBus0303807 (L3,L4)
+│       ├── 93_LVBus0303808 (L5,L6)
+│       │   └── 93_LVBus0303809 (L7,L8)
+│       │       ├── 93_LVBus0303810 (L10,L9)
+│       │       │   ├── 93_LVBus0303811 (L11,L12)
+│       │       │   ├── 93_LVBus0303812 (L13,L14)
+│       │       │   └── 93_LVBus0303813 (L15,L16)
+│       │       │       └── 93_LVBus0303814 (L17,L18)
+│       │       ├── 93_LVBus0303815 (L19,L20)
+│       │       └── 93_LVBus0303816 (L21,L22)
+│       │           └── 93_LVBus0303817 (L23,L24)
+│       │               └── 93_LVBus0303818 (L25,L26)
+│       └── 93_LVBus0303819 (L27,L28)
+│           └── 93_LVBus0303820 (L29,L30)
+│               └── 93_LVBus0303821 (L31,L32)
+│                   ├── 93_LVBus0303822 (L33,L34)
+│                   │   └── 93_LVBus0303823 (L35,L36)
+│                   │       └── 93_LVBus0303824 (L37,L38)
+│                   └── 93_LVBus0303825 (L39,L40)
+├── 93_LVBus0303827 (L41,L42)
+│   ├── 93_LVBus0303828 (L43,L44)
+│   └── 93_LVBus0303829 (L45,L46)
+│       ├── 93_LVBus0303830 (L47,L48)
+│       └── 93_LVBus0303831 (L49,L50)
+├── 93_LVBus0303833 (L51,L52)
+│   └── 93_LVBus0303834 (L53,L54)
+└── 93_LVBus0303836 (L55,L56)
+    ├── 93_LVBus0303837 (L57,L58)
+    └── 93_LVBus0303838 (L59,L60)
+        ├── 93_LVBus0303839 (L61,L62)
+        └── 93_LVBus0303840 (L63,L64)
+            └── 93_LVBus0303841 (L65,L66)
+
+Loads (66 total):
+  L1 = 93_LVBus0303806_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303806_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303807_consumption   6.94 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303807_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303808_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303808_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303809_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303809_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303810_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303810_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303811_consumption   3.02 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303811_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303812_consumption   7.29 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303812_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303813_consumption   0.36 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303813_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303814_consumption  37.44 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303814_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303815_consumption   0.15 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303815_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303816_consumption   2.22 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303816_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303817_consumption   4.59 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303817_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303818_consumption   7.55 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303818_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303819_consumption  43.79 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303819_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303820_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303820_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303821_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303821_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303822_consumption   1.85 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303822_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303823_consumption   2.49 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303823_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303824_consumption    0.8 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303824_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303825_consumption   4.81 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303825_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus0303827_consumption   3.15 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus0303827_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus0303828_consumption   7.46 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus0303828_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus0303829_consumption  12.47 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus0303829_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus0303830_consumption   2.71 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus0303830_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus0303831_consumption    3.4 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus0303831_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 16 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 10: 93_MVLV73686_Transformer  (93_MVLV73686_Transformer: Dyn11 20.0kV/400V,  42 buses)
+
+93_MVLV73686_LV
+├── 93_LVBus0303933 (L1,L2)
+│   └── 93_LVBus0303934 (L3,L4)
+│       ├── 93_LVBus0303935 (L5,L6)
+│       │   ├── 93_LVBus0303936 (L7,L8)
+│       │   └── 93_LVBus0303937 (L10,L9)
+│       └── 93_LVBus0303938 (L11,L12)
+│           ├── 93_LVBus0303939 (L13,L14)
+│           │   └── 93_LVBus0303940 (L15,L16)
+│           ├── 93_LVBus0303941 (L17,L18)
+│           └── 93_LVBus0303942 (L19,L20)
+│               └── 93_LVBus0303943 (L21,L22)
+├── 93_LVBus0303945 (L23,L24)
+│   ├── 93_LVBus0303946 (L25,L26)
+│   │   ├── 93_LVBus0303947 (L27,L28)
+│   │   └── 93_LVBus0303948 (L29,L30)
+│   │       └── 93_LVBus0303949 (L31,L32)
+│   │           └── 93_LVBus0303950 (L33,L34)
+│   │               └── 93_LVBus0303951 (L35,L36)
+│   │                   └── 93_LVBus0303952 (L37,L38)
+│   │                       └── 93_LVBus0303953 (L39,L40)
+│   ├── 93_LVBus0303954 (L41,L42)
+│   │   └── 93_LVBus0303955 (L43,L44)
+│   │       └── 93_LVBus0303956 (L45,L46)
+│   │           ├── 93_LVBus0303957 (L47,L48)
+│   │           └── 93_LVBus0303958 (L49,L50)
+│   │               └── 93_LVBus0303959 (L51,L52)
+│   └── 93_LVBus0303960 (L53,L54)
+│       ├── 93_LVBus0303961 (L55,L56)
+│       │   └── 93_LVBus0303962 (L57,L58)
+│       │       ├── 93_LVBus0303963 (L59,L60)
+│       │       │   ├── 93_LVBus0303964 (L61,L62)
+│       │       │   └── 93_LVBus0303965 (L63,L64)
+│       │       │       ├── 93_LVBus0303966 (L65,L66)
+│       │       │       │   └── 93_LVBus0303967 (L67,L68)
+│       │       │       │       └── 93_LVBus0303968 (L69,L70)
+│       │       │       └── 93_LVBus0303969 (L71,L72)
+│       │       └── 93_LVBus0303970 (L73,L74)
+│       └── 93_LVBus0303971 (L75,L76)
+│           └── 93_LVBus0303972 (L77,L78)
+│               └── 93_LVBus0303973 (L79,L80)
+└── 93_LVBus0303975 (L81,L82)
+
+Loads (82 total):
+  L1 = 93_LVBus0303933_consumption   0.13 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303933_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303934_consumption   2.63 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303934_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303935_consumption   0.51 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303935_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303936_consumption   1.19 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303936_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303937_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303937_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303938_consumption   1.71 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303938_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303939_consumption   8.82 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303939_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303940_consumption   1.76 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303940_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303941_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303941_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303942_consumption    0.1 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303942_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303943_consumption   1.19 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303943_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303945_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303945_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303946_consumption   4.81 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303946_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303947_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303947_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303948_consumption   0.64 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303948_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303949_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303949_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303950_consumption   0.11 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303950_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303951_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303951_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303952_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303952_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303953_consumption   1.54 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303953_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus0303954_consumption   0.36 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus0303954_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus0303955_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus0303955_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus0303956_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus0303956_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus0303957_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus0303957_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus0303958_consumption   1.44 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus0303958_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 32 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 11: 93_MVLV31514_Transformer  (93_MVLV31514_Transformer: Dyn11 20.0kV/400V,  32 buses)
+
+93_MVLV31514_LV
+├── 93_LVBus0303763 (L1,L2)
+│   └── 93_LVBus0303764 (L3,L4)
+├── 93_LVBus0303766 (L5,L6)
+│   └── 93_LVBus0303767 (L7,L8)
+│       └── 93_LVBus0303768 (L10,L9)
+├── 93_LVBus0303770 (L11,L12)
+│   └── 93_LVBus0303771 (L13,L14)
+│       ├── 93_LVBus0303772 (L15,L16)
+│       │   └── 93_LVBus0303773 (L17,L18)
+│       └── 93_LVBus0303774 (L19,L20)
+│           ├── 93_LVBus0303775 (L21,L22)
+│           ├── 93_LVBus0303776 (L23,L24)
+│           │   └── 93_LVBus0303777 (L25,L26)
+│           │       ├── 93_LVBus1348827 (L41,L42)
+│           │       │   └── 93_LVBus1383838 (L57,L58)
+│           │       │       └── 93_LVBus1404118 (L59,L60)
+│           │       │           └── 93_LVBus1404119 (L61,L62)
+│           │       ├── 93_LVBus1351799 (L43,L44)
+│           │       │   └── 93_LVBus1351800 (L45,L46)
+│           │       ├── 93_LVBus1351801 (L47,L48)
+│           │       │   ├── 93_LVBus1351802 (L49,L50)
+│           │       │   └── 93_LVBus1351803 (L51,L52)
+│           │       ├── 93_LVBus1357139 (L53,L54)
+│           │       └── 93_LVBus1357140 (L55,L56)
+│           ├── 93_LVBus0303778 (L27,L28)
+│           │   └── 93_LVBus0303779 (L29,L30)
+│           └── 93_LVBus0303780 (L31,L32)
+└── 93_LVBus0303782 (L33,L34)
+    └── 93_LVBus0303783 (L35,L36)
+        └── 93_LVBus0303784 (L37,L38)
+            └── 93_LVBus0303785 (L39,L40)
+
+Loads (62 total):
+  L1 = 93_LVBus0303763_consumption   1.23 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303763_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303764_consumption   1.46 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303764_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303766_consumption   2.68 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303766_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303767_consumption   1.03 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303767_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303768_consumption  38.15 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303768_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303770_consumption   1.92 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303770_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L13 = 93_LVBus0303771_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L14 = 93_LVBus0303771_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L15 = 93_LVBus0303772_consumption   0.07 kW  WYE  terminals: 1,2,3,n
+  L16 = 93_LVBus0303772_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L17 = 93_LVBus0303773_consumption  38.55 kW  WYE  terminals: 1,2,3,n
+  L18 = 93_LVBus0303773_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L19 = 93_LVBus0303774_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L20 = 93_LVBus0303774_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L21 = 93_LVBus0303775_consumption   1.19 kW  WYE  terminals: 1,2,3,n
+  L22 = 93_LVBus0303775_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L23 = 93_LVBus0303776_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L24 = 93_LVBus0303776_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L25 = 93_LVBus0303777_consumption   1.28 kW  WYE  terminals: 1,2,3,n
+  L26 = 93_LVBus0303777_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L27 = 93_LVBus0303778_consumption    0.4 kW  WYE  terminals: 1,2,3,n
+  L28 = 93_LVBus0303778_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L29 = 93_LVBus0303779_consumption   2.76 kW  WYE  terminals: 1,2,3,n
+  L30 = 93_LVBus0303779_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L31 = 93_LVBus0303780_consumption   0.52 kW  WYE  terminals: 1,2,3,n
+  L32 = 93_LVBus0303780_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L33 = 93_LVBus0303782_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L34 = 93_LVBus0303782_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L35 = 93_LVBus0303783_consumption   16.8 kW  WYE  terminals: 1,2,3,n
+  L36 = 93_LVBus0303783_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L37 = 93_LVBus0303784_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L38 = 93_LVBus0303784_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L39 = 93_LVBus0303785_consumption    2.0 kW  WYE  terminals: 1,2,3,n
+  L40 = 93_LVBus0303785_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L41 = 93_LVBus1348827_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L42 = 93_LVBus1348827_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L43 = 93_LVBus1351799_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L44 = 93_LVBus1351799_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L45 = 93_LVBus1351800_consumption   4.03 kW  WYE  terminals: 1,2,3,n
+  L46 = 93_LVBus1351800_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L47 = 93_LVBus1351801_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L48 = 93_LVBus1351801_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L49 = 93_LVBus1351802_consumption  15.32 kW  WYE  terminals: 1,2,3,n
+  L50 = 93_LVBus1351802_production    0.0 kW  WYE  terminals: 1,2,3,n
+  … and 12 more (pass legend_limit= to show all)
+
+────────────────────────────────────────────────────────────
+# Section 12: 93_MVLV59994_Transformer  (93_MVLV59994_Transformer: Dyn11 20.0kV/400V,  7 buses)
+
+93_MVLV59994_LV
+├── 93_LVBus0303899 (L1,L2)
+├── 93_LVBus0303901 (L3,L4)
+├── 93_LVBus0303903 (L5,L6)
+│   └── 93_LVBus0303904 (L7,L8)
+│       └── 93_LVBus0303905 (L10,L9)
+└── 93_LVBus0303907 (L11,L12)
+
+Loads (12 total):
+  L1 = 93_LVBus0303899_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L2 = 93_LVBus0303899_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L3 = 93_LVBus0303901_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L4 = 93_LVBus0303901_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L5 = 93_LVBus0303903_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L6 = 93_LVBus0303903_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L7 = 93_LVBus0303904_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L8 = 93_LVBus0303904_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L9 = 93_LVBus0303905_consumption   3.84 kW  WYE  terminals: 1,2,3,n
+  L10 = 93_LVBus0303905_production    0.0 kW  WYE  terminals: 1,2,3,n
+  L11 = 93_LVBus0303907_consumption    0.0 kW  WYE  terminals: 1,2,3,n
+  L12 = 93_LVBus0303907_production    0.0 kW  WYE  terminals: 1,2,3,n

@@ -1,0 +1,43 @@
+{
+    "electrical_schema_checks_per_case": 2,
+    "bmopftools_schema_sha256": "9dcf693edd7403455185b2e9eb7dd37f49351867821b4fa65d2fd6434fe8cacc",
+    "additional_schema_sha256": "a74f4d2be151e4b250a47a1730445301c093572fce8de609e9af15b76c67ef73",
+    "bus_coordinate_checks": 89870,
+    "schema_projection_excluded_fields": [
+        "bus.longitude",
+        "bus.latitude"
+    ],
+    "transformer_primitive_checks": 5500,
+    "cases": 150,
+    "structural_errors": 0,
+    "findings": {
+        "W.DIV.LOAD_SYMMETRIC": 150,
+        "W.CONN.DANGLING": 122,
+        "I.DIV.LOAD_PHASE_BALANCED": 384,
+        "I.RED.LOAD_SPARSE_PHASES": 143,
+        "I.PROV.SHUNT_CONDUCTANCE": 286,
+        "I.DIV.LOAD_IMBALANCE": 46454,
+        "I.DIV.LOAD_UNIFORM_MODEL": 150,
+        "I.PROV.SEQ_DERIVED": 138,
+        "I.BENCH.AUGMENTATION": 150,
+        "I.OPS.FEEDER_SHORT": 203,
+        "I.DOM.LINE_IMPEDANCE_SPREAD": 13,
+        "I.PROV.DECOUPLED_PHASES": 150,
+        "I.PROV.LINE_MODEL_UNIFORM": 150,
+        "W.OPS.IMPORT_DEPENDENT": 150,
+        "I.RED.MERGEABLE_LINES": 98,
+        "I.PROV.LINE_SWITCH_LIKE": 1,
+        "I.PRE.SINGLE_SOURCE": 150,
+        "I.SCHEMA.UNKNOWN_FIELDS": 150,
+        "W.OPS.XFMR_OVERLOADED": 9,
+        "W.RED.ZERO_LOADS": 150,
+        "I.PRE.NO_VOLT_BOUNDS": 150,
+        "I.BENCH.LOAD_ZERO_PNOM": 150,
+        "I.RED.LOAD_MERGEABLE": 150,
+        "I.DIV.LOAD_UNIFORM_CONFIG": 8,
+        "I.OPS.FEEDER_LONG": 95,
+        "I.OPS.UNLOADED_PHASE": 18,
+        "W.CONV.TERMINAL_ROLES_INFERRED": 150,
+        "I.PROV.IMPEDANCE_TRANSFORM_KR": 150
+    }
+}

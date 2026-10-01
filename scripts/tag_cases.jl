@@ -34,6 +34,7 @@ const PROV_ENWL = Dict(
 function normalise_license(s)
     s === nothing && return nothing
     ls = lowercase(string(s))
+    ls == "etalab-2.0" && return "etalab-2.0"
     (occursin("by-nc-sa", ls) || occursin("by-nc-sa", ls)) && return "CC-BY-NC-SA-4.0"
     occursin("nc-sa", ls) && return "CC-BY-NC-SA-4.0"
     (occursin("by/4.0", ls) || occursin("by-4.0", ls) || occursin("cc-by-4", ls)) && return "CC-BY-4.0"

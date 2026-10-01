@@ -14,3 +14,11 @@ The original source is
 Geth, Frederik; Heidari, Rahmat; Clark, Jordan; Lucas, Kurt; & Nimalsiri, Nanduni (2025): Realistic Australian Medium Voltage Feeder with Associated Low Voltage Feeders. v1. CSIRO. Data Collection. https://doi.org/10.25919/ghnz-bk28
 
 The derivative data is released, like the original, under the  Creative Commons Attribution Noncommercial-Share Alike 4.0 Licence. Please refer to the source if you plan to use/reuse/modify: https://doi.org/10.25919/ghnz-bk28
+
+
+# Representative French Power Grids - derivatives
+
+The `FrenchPowerGrids/` subfolder retains the original Etalab Open Licence 2.0 (`etalab-2.0`), including commercial
+reuse with attribution. Producer: Seddik Yassine Abdelouadoud. Source: [https://www.data.gouv.fr/fr/datasets/departs-hta-representatifs-pour-lanalyse-des-reseaux-de-distribution-francais/](https://www.data.gouv.fr/fr/datasets/departs-hta-representatifs-pour-lanalyse-des-reseaux-de-distribution-francais/).
+See [FrenchPowerGrids/License.md](FrenchPowerGrids/License.md) for the complete terms, source update dates and
+attribution. The CC BY and CC BY-NC-SA terms above apply to their named dataset families, not the French data.
