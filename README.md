@@ -1,6 +1,6 @@
 # BMOPF Draft Data
 
-**An open, growing library of unbalanced distribution-network benchmarks for optimal power flow — traceable to real feeders, licensed for reuse, and ready to drop into your solver.**
+**An open, growing library of unbalanced distribution-network benchmarks for optimal power flow — traceable to real and synthetic feeders, licensed for reuse, and ready to drop into your solver.**
 
 Distribution systems are where the energy transition actually lands: rooftop
 solar, EV chargers, batteries and heat pumps all connect to unbalanced,
@@ -74,7 +74,7 @@ benchmarks:
 Openly-licensed source models: **OpenDSS** files (line codes, lines, loads, transformers,
 `Master.dss`). This is the *starting material* — use it to develop your own
 benchmarks, reproduce our conversions, or study realistic network structure.
-Includes the ENWL four-wire LV variants (Kron-reduced and phase-to-neutral
+Includes the Texas7k synthetic substation pilot, the ENWL four-wire LV variants (Kron-reduced and phase-to-neutral
 forms), the scaled D-Suite LV networks, and 150 representative French MV/LV networks in Roseau JSON v5.
 
 ### 2. `output/` — power-flow (PF) cases in BMOPF JSON
@@ -133,6 +133,7 @@ documented in a `License.md`/`license.md` in the data directory.
 | `dsuite_networks_scaled_v1.1` | CC BY 4.0 | yes | D-Suite LV networks (Newcastle University), [10.25405/data.ncl.27175317](https://doi.org/10.25405/data.ncl.27175317) |
 | `SWER`, `pf_comparison`, small fixtures | CC BY 4.0 | yes | authored for BMOPFTools |
 | `FrenchPowerGrids` | Etalab Open Licence 2.0 (`etalab-2.0`) | yes | Seddik Yassine Abdelouadoud / [original dataset](https://www.data.gouv.fr/fr/datasets/departs-hta-representatifs-pour-lanalyse-des-reseaux-de-distribution-francais/) |
+| `Texas7k` | CC BY 3.0 US (`CC-BY-3.0-US`) | yes | [Texas7k source](https://electricgrids.engr.tamu.edu/texas7k-td/); license follows the [OEDI registry](https://registry.opendata.aws/oedi-data-lake/) |
 
 > **Note:** CC BY-NC-SA derivatives must be redistributed under the same
 > non-commercial/share-alike terms — plan accordingly if you are building a
@@ -151,6 +152,23 @@ Five feeders also agree with fresh Roseau engine solves; the other 145 exceed th
 difference. These are PF models with reference solutions; future OPF curation needs its own feasibility checks.
 See the [mapping and evidence](output/FrenchPowerGrids/README.md) and
 [reproduction commands](scripts/FrenchPowerGrids/README.md).
+
+## Texas7k nominal power-flow pilot
+
+[`output/Texas7kPilot/`](output/Texas7kPilot/) contains one synthetic Texas substation
+with six feeders, 22,081 BMOPF buses and bus longitude/latitude. The unchanged
+OpenDSS source and hashes are in [`test/data/Texas7k/`](test/data/Texas7k/).
+[`scripts/Texas7k/`](scripts/Texas7k/) contains the bounded Python adapter around
+the PowerIO CLI, OpenDSS control solve, and native Tellegen validation, under MIT.
+This is a separate workflow from the Julia pipeline described above.
+
+The electrical model passes the pinned BMOPF 0.2.0 proposal schema; direct bus
+coordinate fields are separately checked extensions. All 38,218 original voltage
+nodes agree with OpenDSS within 2.24e-6 pu. This nominal-load PF snapshot has
+voltage and equipment-loading violations, and has no OPF objective or added
+voltage bounds. It is outside the curated benchmark index. Source and derivative
+data follow the OEDI registry's CC BY 3.0 US license; see the dataset-specific
+license and source notice for attribution, the published license basis, and modifications.
 
 ## Feature tagging & discovery
 
